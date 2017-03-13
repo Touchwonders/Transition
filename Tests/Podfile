@@ -1,0 +1,13 @@
+use_frameworks!
+
+target "TestProject" do
+  pod 'Transition', :path => '../'
+
+  abstract_target 'Tests' do
+    target "TransitionTests"
+    target "TransitionUITests"
+
+    # pod 'Quick'
+    # pod 'Nimble'
+  end
+end
