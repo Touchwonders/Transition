@@ -71,4 +71,4 @@ public protocol SharedElementInteraction : SharedElementTransitionSpecification 
 }
 
 
-public typealias SharedElementTransition = protocol<SharedElementAnimation, SharedElementInteraction>
+public typealias SharedElementTransition = SharedElementAnimation & SharedElementInteraction
