@@ -21,9 +21,7 @@
 //    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //    SOFTWARE.
 
-
 import UIKit
-
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -33,18 +31,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        ///  We need the TabBarController to set it up for custom transitions
-        if let tabBarController = window?.rootViewController as? UITabBarController {
-            tabBarController.tabBar.unselectedItemTintColor = grayscale(2)
-            ///  Populate it with some nice ViewControllers
-            tabBarController.viewControllers = Shape.all.map { ViewController.fromStoryboard(withShape: $0) }
-            
-            ///  Then create our custom transitions manager for the TabBarController
-            transitionController = TabBarTransitions(in: tabBarController)
+        let tabBarController = UITabBarController()
+        tabBarController.tabBar.backgroundImage = UIImage(named: "background")
+        tabBarController.viewControllers = [
+            ViewController(with: .circle),
+            ViewController(with: .triangle),
+            ViewController(with: .square)
+        ]
+        
+        transitionController = TabBarTransitions(in: tabBarController)
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = tabBarController
+        window?.makeKeyAndVisible()
+        
+        for item in tabBarController.tabBar.items! {
+            item.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
         }
         
         return true
     }
-
 }
-

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A5F00650DFC14EDBEE783E39 /* Pods_BuiltInTransitionsCatalog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8F5BA807CC48419604DF77B /* Pods_BuiltInTransitionsCatalog.framework */; };
 		BA7592DE1E5CC79B00B021BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7592DD1E5CC79B00B021BF /* AppDelegate.swift */; };
 		BA7592E01E5CC79B00B021BF /* AwesomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7592DF1E5CC79B00B021BF /* AwesomeViewController.swift */; };
 		BA7592E31E5CC79B00B021BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA7592E11E5CC79B00B021BF /* Main.storyboard */; };
@@ -19,7 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B8F5BA807CC48419604DF77B /* Pods_BuiltInTransitionsCatalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuiltInTransitionsCatalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7592DA1E5CC79B00B021BF /* BuiltInTransitionsCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuiltInTransitionsCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7592DD1E5CC79B00B021BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA7592DF1E5CC79B00B021BF /* AwesomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeViewController.swift; sourceTree = "<group>"; };
@@ -30,8 +28,6 @@
 		BA7592EF1E5CC89F00B021BF /* CatalogMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogMenu.swift; sourceTree = "<group>"; };
 		BA7592F11E5CD10C00B021BF /* Catalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
 		BAE576761E5ED48400E8ABC3 /* TransitionStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionStyle.swift; sourceTree = "<group>"; };
-		C55D959723C1AF3CB62C9A51 /* Pods-BuiltInTransitionsCatalog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuiltInTransitionsCatalog.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuiltInTransitionsCatalog/Pods-BuiltInTransitionsCatalog.release.xcconfig"; sourceTree = "<group>"; };
-		FA2013249FE65BAF95C7F037 /* Pods-BuiltInTransitionsCatalog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuiltInTransitionsCatalog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuiltInTransitionsCatalog/Pods-BuiltInTransitionsCatalog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,29 +35,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5F00650DFC14EDBEE783E39 /* Pods_BuiltInTransitionsCatalog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7566E53AB91E051F1F3719D6 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				FA2013249FE65BAF95C7F037 /* Pods-BuiltInTransitionsCatalog.debug.xcconfig */,
-				C55D959723C1AF3CB62C9A51 /* Pods-BuiltInTransitionsCatalog.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		BA7592D11E5CC79B00B021BF = {
 			isa = PBXGroup;
 			children = (
 				BA7592DC1E5CC79B00B021BF /* BuiltInTransitionsCatalog */,
 				BA7592DB1E5CC79B00B021BF /* Products */,
-				7566E53AB91E051F1F3719D6 /* Pods */,
-				EB2502687631B43C6BF92B62 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,14 +81,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		EB2502687631B43C6BF92B62 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B8F5BA807CC48419604DF77B /* Pods_BuiltInTransitionsCatalog.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,12 +88,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA7592EC1E5CC79B00B021BF /* Build configuration list for PBXNativeTarget "BuiltInTransitionsCatalog" */;
 			buildPhases = (
-				2FAB643D5AFA21F784A7081C /* [CP] Check Pods Manifest.lock */,
 				BA7592D61E5CC79B00B021BF /* Sources */,
 				BA7592D71E5CC79B00B021BF /* Frameworks */,
 				BA7592D81E5CC79B00B021BF /* Resources */,
-				B1AA4F9D14F25C7D45829B58 /* [CP] Embed Pods Frameworks */,
-				7E06C03167931488998659B4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -175,54 +148,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2FAB643D5AFA21F784A7081C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		7E06C03167931488998659B4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuiltInTransitionsCatalog/Pods-BuiltInTransitionsCatalog-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B1AA4F9D14F25C7D45829B58 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuiltInTransitionsCatalog/Pods-BuiltInTransitionsCatalog-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BA7592D61E5CC79B00B021BF /* Sources */ = {
@@ -352,7 +277,6 @@
 		};
 		BA7592ED1E5CC79B00B021BF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA2013249FE65BAF95C7F037 /* Pods-BuiltInTransitionsCatalog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LQ449R4NTB;
@@ -366,7 +290,6 @@
 		};
 		BA7592EE1E5CC79B00B021BF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C55D959723C1AF3CB62C9A51 /* Pods-BuiltInTransitionsCatalog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LQ449R4NTB;

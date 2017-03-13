@@ -9,24 +9,19 @@
 /* Begin PBXBuildFile section */
 		BA39129D1E43388A00F737D3 /* Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA39129C1E43388A00F737D3 /* Convenience.swift */; };
 		BA3C87661E4223C600C37AE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3C87651E4223C600C37AE9 /* AppDelegate.swift */; };
-		BA3C876D1E4223C600C37AE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3C876B1E4223C600C37AE9 /* Main.storyboard */; };
 		BA3C876F1E4223C600C37AE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA3C876E1E4223C600C37AE9 /* Assets.xcassets */; };
 		BA3C87721E4223C600C37AE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3C87701E4223C600C37AE9 /* LaunchScreen.storyboard */; };
 		BA3C87861E422F4300C37AE9 /* TabBarTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3C87851E422F4300C37AE9 /* TabBarTransitions.swift */; };
 		BA3C878B1E42332E00C37AE9 /* ShapeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3C878A1E42332E00C37AE9 /* ShapeTransitionAnimation.swift */; };
 		BA3C878D1E4247E000C37AE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3C878C1E4247E000C37AE9 /* ViewController.swift */; };
 		BAE5767E1E5EDA3F00E8ABC3 /* TransitionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE5767D1E5EDA3F00E8ABC3 /* TransitionStyle.swift */; };
-		BECCC657A3E69D8D638E56E1 /* Pods_TabBarTransitionsExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80828D01E8B94E0F9976559A /* Pods_TabBarTransitionsExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4DDDA8A065A7177731545953 /* Pods-TabBarTransitionsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarTransitionsExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TabBarTransitionsExample/Pods-TabBarTransitionsExample.debug.xcconfig"; sourceTree = "<group>"; };
-		80828D01E8B94E0F9976559A /* Pods_TabBarTransitionsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBarTransitionsExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA39129C1E43388A00F737D3 /* Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Convenience.swift; sourceTree = "<group>"; };
 		BA3912C81E4346B300F737D3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BA3C87621E4223C600C37AE9 /* TabBarTransitionsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabBarTransitionsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3C87651E4223C600C37AE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BA3C876C1E4223C600C37AE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA3C876E1E4223C600C37AE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA3C87711E4223C600C37AE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA3C87731E4223C600C37AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,7 +29,6 @@
 		BA3C878A1E42332E00C37AE9 /* ShapeTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeTransitionAnimation.swift; sourceTree = "<group>"; };
 		BA3C878C1E4247E000C37AE9 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BAE5767D1E5EDA3F00E8ABC3 /* TransitionStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionStyle.swift; sourceTree = "<group>"; };
-		FFEE8D58E10CD120ADFC34F6 /* Pods-TabBarTransitionsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarTransitionsExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-TabBarTransitionsExample/Pods-TabBarTransitionsExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,29 +36,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BECCC657A3E69D8D638E56E1 /* Pods_TabBarTransitionsExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7E68A07BE57A14CAF9E927AF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				80828D01E8B94E0F9976559A /* Pods_TabBarTransitionsExample.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		BA3C87591E4223C600C37AE9 = {
 			isa = PBXGroup;
 			children = (
 				BA3912C81E4346B300F737D3 /* README.md */,
 				BA3C87641E4223C600C37AE9 /* TabBarTransitionsExample */,
 				BA3C87631E4223C600C37AE9 /* Products */,
-				FA619F64460CCA58D17792FB /* Pods */,
-				7E68A07BE57A14CAF9E927AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,21 +92,11 @@
 		BAE5767F1E5EDA4500E8ABC3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BA3C876B1E4223C600C37AE9 /* Main.storyboard */,
 				BA3C87701E4223C600C37AE9 /* LaunchScreen.storyboard */,
 				BA3C876E1E4223C600C37AE9 /* Assets.xcassets */,
 				BA3C87731E4223C600C37AE9 /* Info.plist */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		FA619F64460CCA58D17792FB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4DDDA8A065A7177731545953 /* Pods-TabBarTransitionsExample.debug.xcconfig */,
-				FFEE8D58E10CD120ADFC34F6 /* Pods-TabBarTransitionsExample.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,12 +106,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA3C87761E4223C600C37AE9 /* Build configuration list for PBXNativeTarget "TabBarTransitionsExample" */;
 			buildPhases = (
-				F8969DE47A799AB81FECA578 /* [CP] Check Pods Manifest.lock */,
 				BA3C875E1E4223C600C37AE9 /* Sources */,
 				BA3C875F1E4223C600C37AE9 /* Frameworks */,
 				BA3C87601E4223C600C37AE9 /* Resources */,
-				E953BC6F8782335CAA008284 /* [CP] Embed Pods Frameworks */,
-				63D56373D204A0920C561512 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,59 +161,10 @@
 			files = (
 				BA3C87721E4223C600C37AE9 /* LaunchScreen.storyboard in Resources */,
 				BA3C876F1E4223C600C37AE9 /* Assets.xcassets in Resources */,
-				BA3C876D1E4223C600C37AE9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		63D56373D204A0920C561512 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TabBarTransitionsExample/Pods-TabBarTransitionsExample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E953BC6F8782335CAA008284 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TabBarTransitionsExample/Pods-TabBarTransitionsExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F8969DE47A799AB81FECA578 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BA3C875E1E4223C600C37AE9 /* Sources */ = {
@@ -262,14 +183,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BA3C876B1E4223C600C37AE9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BA3C876C1E4223C600C37AE9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BA3C87701E4223C600C37AE9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -376,7 +289,6 @@
 		};
 		BA3C87771E4223C600C37AE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DDDA8A065A7177731545953 /* Pods-TabBarTransitionsExample.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -392,7 +304,6 @@
 		};
 		BA3C87781E4223C600C37AE9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFEE8D58E10CD120ADFC34F6 /* Pods-TabBarTransitionsExample.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
