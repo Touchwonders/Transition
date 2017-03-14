@@ -32,6 +32,20 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(white: 0.9, alpha: 1)
+        
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Swipe between view controllers or tab one of the bar items."
+        label.textColor = UIColor(white: 0.2, alpha: 1)
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        view.addSubview(label)
+        
+        NSLayoutConstraint.activate([
+            label.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30),
+            label.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -30),
+            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            ])
     }
 }

@@ -34,6 +34,8 @@ class CatalogMenu : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(white: 0.9, alpha: 1)
+        
         transitionController = TransitionController(forInteractiveTransitionsIn: navigationController!, transitionsSource: self, operationDelegate: self, interactionController: panInteractionController)
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }

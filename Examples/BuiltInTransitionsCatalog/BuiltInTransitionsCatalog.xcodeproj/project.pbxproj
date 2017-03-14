@@ -15,9 +15,12 @@
 		BA7592F01E5CC89F00B021BF /* CatalogMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7592EF1E5CC89F00B021BF /* CatalogMenu.swift */; };
 		BA7592F21E5CD10C00B021BF /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7592F11E5CD10C00B021BF /* Catalog.swift */; };
 		BAE576771E5ED48400E8ABC3 /* TransitionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE576761E5ED48400E8ABC3 /* TransitionStyle.swift */; };
+		E869D1806ADD6F26D1037B77 /* Pods_BuiltInTransitionsCatalog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8F032D74589B67CB68A56E /* Pods_BuiltInTransitionsCatalog.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC8F032D74589B67CB68A56E /* Pods_BuiltInTransitionsCatalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuiltInTransitionsCatalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5A66A82E93113AEA7FA77BA /* Pods-BuiltInTransitionsCatalog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuiltInTransitionsCatalog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuiltInTransitionsCatalog/Pods-BuiltInTransitionsCatalog.debug.xcconfig"; sourceTree = "<group>"; };
 		BA7592DA1E5CC79B00B021BF /* BuiltInTransitionsCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuiltInTransitionsCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7592DD1E5CC79B00B021BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA7592DF1E5CC79B00B021BF /* AwesomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +31,7 @@
 		BA7592EF1E5CC89F00B021BF /* CatalogMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogMenu.swift; sourceTree = "<group>"; };
 		BA7592F11E5CD10C00B021BF /* Catalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
 		BAE576761E5ED48400E8ABC3 /* TransitionStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionStyle.swift; sourceTree = "<group>"; };
+		C0B51F0F4063C9382929024E /* Pods-BuiltInTransitionsCatalog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuiltInTransitionsCatalog.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuiltInTransitionsCatalog/Pods-BuiltInTransitionsCatalog.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E869D1806ADD6F26D1037B77 /* Pods_BuiltInTransitionsCatalog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B9C56C65E2C1CDA4970DE67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC8F032D74589B67CB68A56E /* Pods_BuiltInTransitionsCatalog.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D8832D06883192DE70050BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B5A66A82E93113AEA7FA77BA /* Pods-BuiltInTransitionsCatalog.debug.xcconfig */,
+				C0B51F0F4063C9382929024E /* Pods-BuiltInTransitionsCatalog.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BA7592D11E5CC79B00B021BF = {
 			isa = PBXGroup;
 			children = (
 				BA7592DC1E5CC79B00B021BF /* BuiltInTransitionsCatalog */,
 				BA7592DB1E5CC79B00B021BF /* Products */,
+				9D8832D06883192DE70050BC /* Pods */,
+				3B9C56C65E2C1CDA4970DE67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,9 +112,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA7592EC1E5CC79B00B021BF /* Build configuration list for PBXNativeTarget "BuiltInTransitionsCatalog" */;
 			buildPhases = (
+				E3310AD200D42A35D2FBA182 /* [CP] Check Pods Manifest.lock */,
 				BA7592D61E5CC79B00B021BF /* Sources */,
 				BA7592D71E5CC79B00B021BF /* Frameworks */,
 				BA7592D81E5CC79B00B021BF /* Resources */,
+				C12F6E9F3F5E5C8D1084AD91 /* [CP] Embed Pods Frameworks */,
+				24B5C947C1AA082EDE06BD7D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,6 +175,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24B5C947C1AA082EDE06BD7D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuiltInTransitionsCatalog/Pods-BuiltInTransitionsCatalog-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C12F6E9F3F5E5C8D1084AD91 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuiltInTransitionsCatalog/Pods-BuiltInTransitionsCatalog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3310AD200D42A35D2FBA182 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BA7592D61E5CC79B00B021BF /* Sources */ = {
@@ -277,6 +352,7 @@
 		};
 		BA7592ED1E5CC79B00B021BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5A66A82E93113AEA7FA77BA /* Pods-BuiltInTransitionsCatalog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LQ449R4NTB;
@@ -290,6 +366,7 @@
 		};
 		BA7592EE1E5CC79B00B021BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0B51F0F4063C9382929024E /* Pods-BuiltInTransitionsCatalog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LQ449R4NTB;

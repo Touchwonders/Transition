@@ -29,9 +29,9 @@ import UIKit
 let transitionFontName = "ArialRoundedMTBold"
 
 func color(_ index: Int) -> UIColor {
-    let colors = [UIColor(hue:0.589, saturation:0.809, brightness:0.843, alpha:1),
-                  UIColor(hue:0.588, saturation:0.804, brightness:0.341, alpha:1),
-                  UIColor(hue:0.588, saturation:0.807, brightness:0.592, alpha:1),
-                  UIColor(hue:0.588, saturation:0.809, brightness:0.741, alpha:1)]
+    let colors = [UIColor(red:255/255, green:64/255, blue:159/255, alpha:1),
+                  UIColor(red:51/255, green:255/255, blue:85/255, alpha:1),
+                  UIColor(red:255/255, green:234/255, blue:0/255, alpha:1),
+                  UIColor(red:26/255, green:217/255, blue:255/255, alpha:1)]
     return colors[index % colors.count]
 }
