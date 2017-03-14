@@ -36,8 +36,6 @@ class ShapeView : UIImageView {
     private func setup() {
         self.contentMode = .center
         self.layer.cornerRadius = bounds.midX
-        self.layer.borderWidth = 2.0
-        self.layer.borderColor = UIColor(white: 0.0, alpha: 0.15).cgColor
         self.layer.shouldRasterize = true
     }
     

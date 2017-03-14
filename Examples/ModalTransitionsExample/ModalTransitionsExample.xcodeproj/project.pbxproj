@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		313F9D8EEFB312A7AF7F4633 /* Pods_ModalTransitionsExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F737EC8C406C7DE14DA6942 /* Pods_ModalTransitionsExample.framework */; };
 		BA3912AB1E433FFA00F737D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3912AA1E433FFA00F737D3 /* AppDelegate.swift */; };
 		BA3912AD1E433FFA00F737D3 /* ShapeSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3912AC1E433FFA00F737D3 /* ShapeSourceViewController.swift */; };
 		BA3912B01E433FFA00F737D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3912AE1E433FFA00F737D3 /* Main.storyboard */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F737EC8C406C7DE14DA6942 /* Pods_ModalTransitionsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModalTransitionsExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		764FABBDE9DD45BCE301383C /* Pods-ModalTransitionsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModalTransitionsExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ModalTransitionsExample/Pods-ModalTransitionsExample.release.xcconfig"; sourceTree = "<group>"; };
 		BA3912A71E433FFA00F737D3 /* ModalTransitionsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModalTransitionsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3912AA1E433FFA00F737D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA3912AC1E433FFA00F737D3 /* ShapeSourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSourceViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +42,7 @@
 		BA3912D61E48944400F737D3 /* ShapesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapesModel.swift; sourceTree = "<group>"; };
 		BA741BE01E49D25A00BCEDF6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BA7592CF1E5C953600B021BF /* TransitionStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionStyle.swift; sourceTree = "<group>"; };
+		D11A822E629075A4F083FC3B /* Pods-ModalTransitionsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModalTransitionsExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ModalTransitionsExample/Pods-ModalTransitionsExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,18 +50,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				313F9D8EEFB312A7AF7F4633 /* Pods_ModalTransitionsExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31E47155B176639077CF0E05 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D11A822E629075A4F083FC3B /* Pods-ModalTransitionsExample.debug.xcconfig */,
+				764FABBDE9DD45BCE301383C /* Pods-ModalTransitionsExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BA39129E1E433FFA00F737D3 = {
 			isa = PBXGroup;
 			children = (
 				BA741BE01E49D25A00BCEDF6 /* README.md */,
 				BA3912A91E433FFA00F737D3 /* ModalTransitionsExample */,
 				BA3912A81E433FFA00F737D3 /* Products */,
+				31E47155B176639077CF0E05 /* Pods */,
+				FBFBDC2E0D99F15F5B72EDA7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +130,14 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		FBFBDC2E0D99F15F5B72EDA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F737EC8C406C7DE14DA6942 /* Pods_ModalTransitionsExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,9 +145,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA3912B91E433FFA00F737D3 /* Build configuration list for PBXNativeTarget "ModalTransitionsExample" */;
 			buildPhases = (
+				BA78C3469CFA6A804D802A99 /* [CP] Check Pods Manifest.lock */,
 				BA3912A31E433FFA00F737D3 /* Sources */,
 				BA3912A41E433FFA00F737D3 /* Frameworks */,
 				BA3912A51E433FFA00F737D3 /* Resources */,
+				F432B646874A7F8013D3FD93 /* [CP] Embed Pods Frameworks */,
+				1EE0702DEBCAED891E7F6A3D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -181,6 +208,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EE0702DEBCAED891E7F6A3D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ModalTransitionsExample/Pods-ModalTransitionsExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA78C3469CFA6A804D802A99 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F432B646874A7F8013D3FD93 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ModalTransitionsExample/Pods-ModalTransitionsExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BA3912A31E433FFA00F737D3 /* Sources */ = {
@@ -317,6 +392,7 @@
 		};
 		BA3912BA1E433FFA00F737D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D11A822E629075A4F083FC3B /* Pods-ModalTransitionsExample.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -331,6 +407,7 @@
 		};
 		BA3912BB1E433FFA00F737D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 764FABBDE9DD45BCE301383C /* Pods-ModalTransitionsExample.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

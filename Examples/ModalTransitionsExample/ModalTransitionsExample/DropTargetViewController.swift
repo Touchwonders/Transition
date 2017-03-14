@@ -57,7 +57,7 @@ class DropTargetViewController: UIViewController {
         view.layer.shadowRadius = 24.0
         view.layer.shadowOffset = CGSize(width: 0.0, height: 12.0)
         
-        counterImageViews.forEach { $0.image = Shape(rawValue: $0.tag)!.image(size: CGSize(width: 24.0, height: 24.0)) }
+        counterImageViews.forEach { $0.image = Shape(rawValue: $0.tag)!.image }
         updateCounters()
     }
     

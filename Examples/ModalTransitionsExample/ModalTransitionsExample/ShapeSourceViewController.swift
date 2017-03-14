@@ -50,8 +50,9 @@ class ShapeSourceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         shapeViews.forEach {
-            $0.backgroundColor = color($0.tag)
-            $0.image = Shape(rawValue: $0.tag)!.image(size: CGSize(width: 24.0, height: 24.0))
+//            $0.backgroundColor = color($0.tag)
+            $0.isUserInteractionEnabled = false
+            $0.image = Shape(rawValue: $0.tag)!.selectedImage
         }
     }
     
