@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="Documentation/artwork/header.jpg" width="890" alt="Transition"/>
+    <img src="Documentation/artwork/header.png" width="890" alt="Transition"/>
 </div>
 
 ## Introduction
@@ -23,7 +23,7 @@ To run an example project, clone the repo, navigate to one of these example dire
 
 ---
 
-![](Documentation/artwork/tabbar.gif) ![](Documentation/artwork/modal.gif) ![](Documentation/artwork/catalog.gif)
+![](Documentation/artwork/tabbar.gif) ![](Documentation/artwork/modal.gif)
 
 ---
 
@@ -147,8 +147,6 @@ Yes!
 At least, for custom view controller transition animations. There's a lot more that'll help you set up a custom interaction gesture and a shared element that can move between the transitioning views.
 
 The above steps are implemented in the `SimpleExample` that can be found in the `Examples/` directory.
-
-<div align="center"><img style="border: 1px solid #eaeaea" src="Documentation/artwork/simple.gif" /></div>
 
 ## Further reading
 
