@@ -1,0 +1,24 @@
+{
+  "name": "TransitionPlus",
+  "version": "0.0.1",
+  "summary": "Easier interactive interruptible custom ViewController transitions.",
+  "description": "Transition+ makes building interactive interruptible custom view controller transitions easy! You just define the animation and interaction, Transition+ ties it all together.",
+  "homepage": "https://gitlab.touchwonders.com/touchwonders/Transition",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Toine Heuvelmans": "toine@touchwonders.com",
+    "Robert-Hein Hooijmans": "robert-hein@touchwonders.com"
+  },
+  "social_media_url": "https://twitter.com/touchwonders",
+  "source": {
+    "git": "https://gitlab.touchwonders.com/touchwonders/Transition.git",
+    "tag": "0.0.1"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "TransitionPlus/Classes/**/*"
+}
