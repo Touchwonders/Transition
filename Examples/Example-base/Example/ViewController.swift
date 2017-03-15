@@ -20,7 +20,9 @@ class ViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Push VC >", for: .normal)
         button.addTarget(self, action: #selector(pressed(_:)), for: .touchUpInside)
-        button.backgroundColor = .blue
+        button.backgroundColor = UIColor(red: 82/255, green: 77/255, blue: 153/255, alpha: 1)
+        button.layer.cornerRadius = 6
+        button.clipsToBounds = true
         view.addSubview(button)
         
         NSLayoutConstraint.activate([
@@ -33,5 +35,13 @@ class ViewController: UIViewController {
     
     func pressed(_ sender: Any) {
         app?.router.pushNextViewController()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = "Pop VC"
+        navigationItem.backBarButtonItem = backItem
     }
 }

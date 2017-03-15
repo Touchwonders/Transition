@@ -14,6 +14,7 @@ class Router {
     init() {
         navigationController = UINavigationController(rootViewController: ViewController())
         navigationController.interactivePopGestureRecognizer?.isEnabled = false
+        navigationController.navigationBar.tintColor = UIColor(red: 82/255, green: 77/255, blue: 153/255, alpha: 1)
     }
     
     func pushNextViewController() {
