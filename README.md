@@ -2,6 +2,8 @@
     <img src="Documentation/artwork/header.png" width="890" alt="Transition"/>
 </div>
 
+[![CocoaPods version](https://img.shields.io/cocoapods/v/Transition.svg)](https://cocoapods.org/pods/Transition) [![license](https://img.shields.io/github/license/Touchwonders/transition.svg)](https://github.com/Touchwonders/Transition/blob/master/LICENSE) [![platform](https://cocoapod-badges.herokuapp.com/p/Transition/badge.png)]()
+
 ## Introduction
 **Transition** is a library that helps you build iOS view controller transitions. 
 Implementing a nice interactive custom view controller transition involves quite a number of components. You have to implement the correct delegates, handle the switching between passive animation and active interaction phases, ensure the timing is right, think of interruption and cancellation, keep responsibilities separated... It quickly gets messy! This is where Transition helps you out: you just define the animation and the interaction, Transition ties it all together.
