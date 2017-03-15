@@ -1,17 +1,7 @@
-#
-# Be sure to run `pod lib lint Transition.podspec' to ensure this is a
-# valid spec before submitting.
-
 Pod::Spec.new do |s|
   s.name             = 'Transition'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'Easy interactive interruptible custom ViewController transitions.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
 Transition makes building interactive interruptible custom view controller transitions easy! You just define the animation and interaction, Transition ties it all together.
