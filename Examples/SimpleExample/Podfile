@@ -1,5 +1,0 @@
-use_frameworks!
-
-target 'SimpleExample' do
-  pod 'Transition', :path => '../../'
-end
