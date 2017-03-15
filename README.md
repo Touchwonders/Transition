@@ -23,7 +23,7 @@ To run an example project, clone the repo, navigate to one of these example dire
 
 ---
 
-![](Documentation/artwork/tabbar.gif) ![](Documentation/artwork/modal.gif) ![](Documentation/artwork/navigation.gif)
+![](Documentation/artwork/tabbar.gif)![](Documentation/artwork/modal.gif)![](Documentation/artwork/navigation.gif)
 
 ---
 
