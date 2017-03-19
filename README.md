@@ -66,8 +66,8 @@ Your `AnimationLayer` is defined as a part of your `TransitionAnimation`. This r
 
 ```swift
 class SimpleAnimation : TransitionAnimation {
-	
-	private weak var topView: UIView?
+    
+    private weak var topView: UIView?
     private var targetTransform: CGAffineTransform = .identity
     
     func setup(in operationContext: TransitionOperationContext) {
@@ -90,16 +90,16 @@ class SimpleAnimation : TransitionAnimation {
         topView?.transform = isPresenting ? hiddenTransform : .identity
         targetTransform = isPresenting ? .identity : hiddenTransform
     }
-	
-	var layers: [AnimationLayer] {
-		return [AnimationLayer(timingParameters: AnimationTimingParameters(animationCurve: .easeOut), animation: animate)]
-	}
-	
-	func animate() {
-		topView?.transform = targetTransform
-	}
-	
-	func completion(position: UIViewAnimatingPosition) {}
+    
+    var layers: [AnimationLayer] {
+        return [AnimationLayer(timingParameters: AnimationTimingParameters(animationCurve: .easeOut), animation: animate)]
+    }
+    
+    func animate() {
+        topView?.transform = targetTransform
+    }
+    
+    func completion(position: UIViewAnimatingPosition) {}
 }
 ```
 
@@ -121,20 +121,19 @@ Almost there. Say you want to use this transition for `UINavigationController` t
 
 ```swift
 class MyNavigationTransitions {
-	let transitionController: TransitionController
-	let transitionsSource = MyNavigationTransitionSource()
-	
-	init(navigationController: UINavigationController) {
-		transitionController = TransitionController(forTransitionsIn: navigationController, transitionsSource: transitionsSource)
-	}
+    let transitionController: TransitionController
+    let transitionsSource = MyNavigationTransitionSource()
+    
+    init(navigationController: UINavigationController) {
+        transitionController = TransitionController(forTransitionsIn: navigationController, transitionsSource: transitionsSource)
+    }
 }
 
 class MyNavigationTransitionSource : TransitionsSource {
-	func transitionFor(operationContext: TransitionOperationContext, interactionController: TransitionInteractionController?) -> Transition {
-		return Transition(duration: 0.5, animation: SimpleAnimation())
-	}
+    func transitionFor(operationContext: TransitionOperationContext, interactionController: TransitionInteractionController?) -> Transition {
+        return Transition(duration: 0.5, animation: SimpleAnimation())
+    }
 }
-
 ```
 
 The `TransitionController` takes responsibility for animating transitions in the given navigationController, using an external `TransitionsSource` to provide operation-specific transitions (the operation – in this case push or pop – can be obtained from the `TransitionOperationContext`). This means you can return different transition animations for push and pop. You can also provide a single animation that behaves differently depending on the operation (see the `SimpleAnimation`).
