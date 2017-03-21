@@ -562,7 +562,6 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -612,7 +611,6 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -639,7 +637,6 @@
 			baseConfigurationReference = 39B67A5B24DC00F650050B44 /* Pods-TestProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = LQ449R4NTB;
 				INFOPLIST_FILE = TestProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.touchwonders.TestProject;
@@ -653,7 +650,6 @@
 			baseConfigurationReference = C68301C112758C429536F249 /* Pods-TestProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = LQ449R4NTB;
 				INFOPLIST_FILE = TestProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.touchwonders.TestProject;
@@ -667,7 +663,6 @@
 			baseConfigurationReference = E6E66520C565D4E7E742ECE9 /* Pods-TestProject-Tests-TransitionTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = LQ449R4NTB;
 				INFOPLIST_FILE = TransitionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.touchwonders.TestProjectTests;
@@ -682,7 +677,6 @@
 			baseConfigurationReference = A669BEA0F4768D88168D4932 /* Pods-TestProject-Tests-TransitionTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = LQ449R4NTB;
 				INFOPLIST_FILE = TransitionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.touchwonders.TestProjectTests;
@@ -696,7 +690,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 98E768D0D0F081175BB1DD85 /* Pods-TestProject-Tests-TransitionUITests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = LQ449R4NTB;
 				INFOPLIST_FILE = TransitionUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.touchwonders.TestProjectUITests;
@@ -710,7 +703,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3E5186C930C77B9B9FFB2A25 /* Pods-TestProject-Tests-TransitionUITests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = LQ449R4NTB;
 				INFOPLIST_FILE = TransitionUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.touchwonders.TestProjectUITests;
