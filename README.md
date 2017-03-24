@@ -2,7 +2,7 @@
     <img src="Documentation/artwork/header.png" width="890" alt="Transition"/>
 </div>
 
-[![CocoaPods version](https://img.shields.io/cocoapods/v/Transition.svg)](https://cocoapods.org/pods/Transition) [![license](https://img.shields.io/github/license/Touchwonders/transition.svg)](https://github.com/Touchwonders/Transition/blob/master/LICENSE) [![platform](https://cocoapod-badges.herokuapp.com/p/Transition/badge.png)]()
+[![CocoaPods version](https://img.shields.io/cocoapods/v/Transition.svg)](https://cocoapods.org/pods/Transition) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![license](https://img.shields.io/github/license/Touchwonders/transition.svg)](https://github.com/Touchwonders/Transition/blob/master/LICENSE) [![platform](https://cocoapod-badges.herokuapp.com/p/Transition/badge.png)]()
 
 ## Introduction
 **Transition** is a library that helps you build iOS view controller transitions. 
