@@ -171,6 +171,7 @@ If you have any suggestions, please get in touch [with us](https://twitter.com/t
 ## Backlog
 * Add functioning `UIPresentationController` support (it's there, but it doesn't animate properly...)
 * Write more tests
+* See if nonlinear scrubbing (iOS 11, https://developer.apple.com/videos/play/wwdc2017/230/) can be added
 * ...?
 
 ## License
