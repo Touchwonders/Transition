@@ -25,7 +25,7 @@
 import UIKit
 
 
-public typealias AnimationFunction = (Void) -> Void
+public typealias AnimationFunction = () -> Void
 public typealias AnimationFraction = TimeInterval
 
 public struct AnimationRange {
@@ -41,7 +41,7 @@ public struct AnimationRange {
         self.end = end
     }
     
-    static var full: AnimationRange {
+    public static var full: AnimationRange {
         return AnimationRange(start: 0.0, end: 1.0)
     }
 }
