@@ -30,6 +30,8 @@ open class PushTransitionAnimation : EdgeTransitionAnimation {
     private var topTargetTransform: CGAffineTransform = .identity
     private var bottomTargetTransform: CGAffineTransform = .identity
     
+    private var isDismissing: Bool = false
+    
     open override func setup(in operationContext: TransitionOperationContext) {
         let context = operationContext.context
         
@@ -39,7 +41,7 @@ open class PushTransitionAnimation : EdgeTransitionAnimation {
         self.topView = topView
         self.bottomView = topView == context.toView ? context.fromView : context.toView
         
-        let isDismissing = operationContext.operation.isDismissing
+        isDismissing = operationContext.operation.isDismissing
         
         let effectiveTransitionEdge = isDismissing ? transitionEdge.opposite : transitionEdge
         
@@ -70,7 +72,7 @@ open class PushTransitionAnimation : EdgeTransitionAnimation {
     }
     
     open override func completion(position: UIViewAnimatingPosition) {
-        if position != .end {
+        if position != .end && !isDismissing {
             topView?.removeFromSuperview()
         }
         bottomView?.transform = .identity

@@ -31,6 +31,8 @@ open class DissolveTransitionAnimation : TransitionAnimation {
     private weak var topView: UIView?
     private var targetAlpha: CGFloat = 0.0
     
+    private var isDismissing: Bool = false
+    
     open func setup(in operationContext: TransitionOperationContext) {
         let context = operationContext.context
         
@@ -38,7 +40,7 @@ open class DissolveTransitionAnimation : TransitionAnimation {
         
         self.topView = topView
         
-        let isDismissing = operationContext.operation.isDismissing
+        isDismissing = operationContext.operation.isDismissing
         let initialAlpha: CGFloat = isDismissing ? 1.0 : 0.0
         self.targetAlpha = 1.0 - initialAlpha
         
@@ -54,7 +56,7 @@ open class DissolveTransitionAnimation : TransitionAnimation {
     }
     
     open func completion(position: UIViewAnimatingPosition) {
-        if position != .end {
+        if position != .end && !isDismissing {
             topView?.removeFromSuperview()
         }
     }
