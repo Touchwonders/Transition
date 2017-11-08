@@ -225,7 +225,15 @@ internal final class TransitionDriver {
                     animator.addAnimations(layerAnimator.layer.animation)
                     animator.startAnimation()
                 } else {
-                    animator.continueAnimation(withTimingParameters: nil, durationFactor: CGFloat(durationFactor))
+                    // NOTE: THIS IS A TEMPORARY FIX FOR WHAT APPEARS TO BE AN IOS11 REGRESSION
+                    // See this radar: https://openradar.appspot.com/34674968
+                    var timingParameters: UITimingCurveProvider? = nil
+                    if #available(iOS 11.0, *) {
+                        if isReversed {
+                            timingParameters = UICubicTimingParameters(animationCurve: .linear)
+                        }
+                    }
+                    animator.continueAnimation(withTimingParameters: timingParameters, durationFactor: CGFloat(durationFactor))
                 }
             case .isAfter:
                 let delay = layerAnimator.effectiveRange.distance(to: totalFractionComplete) * effectiveDuration
