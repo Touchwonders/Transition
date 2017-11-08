@@ -252,7 +252,13 @@ internal final class TransitionDriver {
                     
                     //  Create a new animator
                     let animator = propertyAnimatorFor(animationLayer: layerAnimator.layer, durationFactor: durationFactor)
-                    completionCoordinator.add(animator: animator)
+                    
+                    //  Only the progressLayerAnimator should be taken into account by the completionCoordinator.
+                    //  Although it should be impossible to have a layerPostion after this layer, the following is
+                    //  just a safeguard to ensure proper completion.
+                    if animator == progressLayerAnimator.animator {
+                        completionCoordinator.add(animator: animator)
+                    }
                     //  Set it as the new animator for this layer
                     layerAnimator.animator = animator
                     
