@@ -51,7 +51,7 @@ public extension UIViewControllerContextTransitioning {
      of a canceled transition). This view is typically the presenting view controller’s view.
     */
     public var fromView: UIView! {
-        return self.view(forKey: .from)
+        return self.view(forKey: .from) ?? fromViewController.view
     }
     
     /**
@@ -59,7 +59,7 @@ public extension UIViewControllerContextTransitioning {
      typically the presented view controller’s view but may also be an ancestor of that view.
     */
     public var toView: UIView! {
-        return self.view(forKey: .to)
+        return self.view(forKey: .to) ?? toViewController.view
     }
 }
 
@@ -70,7 +70,7 @@ public extension UIViewControllerContextTransitioning {
         This installs the to and from view when necessary, based on the operation.
         It returns the top-most view which is either the fromView or toView.
      */
-    public func defaultViewSetup(for operation: TransitionOperation) -> UIView? {
+    @discardableResult public func defaultViewSetup(for operation: TransitionOperation) -> UIView? {
         switch operation {
         case .navigation(let navigationOperation):  return defaultViewSetup(for: navigationOperation)
         case .modal(let modalOperation):            return defaultViewSetup(for: modalOperation)
