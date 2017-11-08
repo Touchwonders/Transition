@@ -118,7 +118,7 @@ public enum TransitionOperation {
         }
     }
     
-    var value: TransitionOperationType? {
+    public var value: TransitionOperationType? {
         switch self {
         case .none: return nil
         case .navigation(let operation): return operation

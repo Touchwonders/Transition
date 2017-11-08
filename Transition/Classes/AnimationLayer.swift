@@ -30,9 +30,9 @@ import UIKit
  *  The developer will be prompt to give a collection of these animation layers that combined will be the total transition.
  */
 public struct AnimationLayer {
-    let range: AnimationRange
-    let timingParameters: AnimationTimingParameters
-    let animation: AnimationFunction
+    public let range: AnimationRange
+    public let timingParameters: AnimationTimingParameters
+    public let animation: AnimationFunction
     
     public init(range: AnimationRange = .full, timingParameters: AnimationTimingParameters, animation: @escaping AnimationFunction) {
         self.range = range
