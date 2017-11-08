@@ -286,8 +286,7 @@ internal final class TransitionDriver {
             let progress = interactionController.progress(in: operationContext)
             
             // Calculate the new fractionComplete
-            let currentFractionComplete = progress.isStep ? (totalFractionComplete + progress.value) : progress.value
-            
+            let currentFractionComplete = min(max(0.0, progress.isStep ? (totalFractionComplete + progress.value) : progress.value), 1.0)
             for layerAnimator in layerAnimators {
                 let relativeFractionComplete = layerAnimator.effectiveRange.relativeFractionComplete(to: currentFractionComplete)
                 // Update the transition animator's fractionCompete to scrub it's animations
