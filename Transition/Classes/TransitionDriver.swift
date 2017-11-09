@@ -92,7 +92,7 @@ internal final class TransitionDriver {
         operationContext.context.containerView.addSubview(progressAnimationView)
         let progressLayer = AnimationLayer(range: .full, timingParameters: AnimationTimingParameters(animationCurve: .linear), animation: { [weak self] in
             self?.progressAnimationView.transform = CGAffineTransform(translationX: -10, y: 0)
-        })
+        }, identifier: "Transition.progressAnimationLayer")
         self.progressLayerAnimator = AnimationLayerAnimator(layer: progressLayer, animator: propertyAnimatorFor(animationLayer: progressLayer))
         completionCoordinator.add(animator: progressLayerAnimator.animator)
         progressLayerAnimator.animator.addCompletion({ [weak self] completionPosition in
@@ -232,6 +232,7 @@ internal final class TransitionDriver {
         if let sharedElementAnimator = sharedElementAnimator {
             durationFactor = sharedElementAnimator.duration / effectiveDuration
         }
+        let durationFactorIsPracticallyOne = fabs(durationFactor - 1.0) < 0.0001
         
         
         for layerAnimator in layerAnimators {
@@ -259,12 +260,18 @@ internal final class TransitionDriver {
                     animator.continueAnimation(withTimingParameters: timingParameters, durationFactor: CGFloat(durationFactor))
                 }
             case .isAfter:
-                let delay = layerAnimator.effectiveRange.distance(to: totalFractionComplete) * effectiveDuration
                 //  The layer should animate after a specific delay.
-                if animator.state == .inactive && durationFactor.isEqual(to: 1.0) {
-                    //  this only happens when the animation is started programmatically. FractionComplete will be 0, durationFactor will be 1.
-                    animator.addAnimations(layerAnimator.layer.animation)
-                    animator.startAnimation(afterDelay: delay)
+                let delay = layerAnimator.effectiveRange.distance(to: totalFractionComplete) * effectiveDuration
+                
+                if durationFactorIsPracticallyOne {
+                    if animator.state == .inactive {
+                        //  this only happens when the animation is started programmatically. FractionComplete will be 0, durationFactor will be 1.
+                        animator.addAnimations(layerAnimator.layer.animation)
+                        animator.startAnimation(afterDelay: delay)
+                    } else {
+                        animator.stopAnimation(true)
+                        animator.startAnimation(afterDelay: delay)
+                    }
                 } else {
                     //  We need to adjust the duration and the delay of the animation. This can only be done by instantiating a new property animator.
                     let delay = delay * durationFactor
@@ -276,7 +283,7 @@ internal final class TransitionDriver {
                     //  Create a new animator
                     let animator = propertyAnimatorFor(animationLayer: layerAnimator.layer, durationFactor: durationFactor)
                     animator.isReversed = isReversed
-                    //  The animator is now in "paused" state, and must be stopped first before it can be started with a delay (further down)
+                    //  The animator is now in "paused" (inactive) state, and must be stopped first before it can be started with a delay (further down)
                     animator.stopAnimation(true)
                     
                     //  Only the progressLayerAnimator should be taken into account by the completionCoordinator.
