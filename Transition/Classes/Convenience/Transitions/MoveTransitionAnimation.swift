@@ -28,6 +28,8 @@ open class MoveTransitionAnimation : EdgeTransitionAnimation {
     
     private var targetTransform: CGAffineTransform = .identity
     
+    private var isDismissing: Bool = false
+    
     open override func setup(in operationContext: TransitionOperationContext) {
         let context = operationContext.context
         
@@ -36,7 +38,7 @@ open class MoveTransitionAnimation : EdgeTransitionAnimation {
         else { return }
         self.topView = topView
         
-        let isDismissing = operationContext.operation.isDismissing
+        isDismissing = operationContext.operation.isDismissing
  
         let effectiveTransitionEdge = isDismissing ? transitionEdge.opposite : transitionEdge
         
@@ -57,7 +59,7 @@ open class MoveTransitionAnimation : EdgeTransitionAnimation {
     }
     
     open override func completion(position: UIViewAnimatingPosition) {
-        if position != .end {
+        if position != .end && !isDismissing {
             topView?.removeFromSuperview()
         }
     }

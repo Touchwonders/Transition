@@ -1,16 +1,16 @@
 PODS:
-  - Transition (1.0.0)
+  - Transition (1.0.1)
 
 DEPENDENCIES:
   - Transition (from `../../`)
 
 EXTERNAL SOURCES:
   Transition:
-    :path: "../../"
+    :path: ../../
 
 SPEC CHECKSUMS:
-  Transition: c4675e42cd7d6a3c23147e72155dbcd610f43f9c
+  Transition: ab1a745e3b93150eb50c15dd3238995fbf36c503
 
 PODFILE CHECKSUM: bfe56d75f5bc5e03864425b1530d0fa17f87a5e0
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.3.1

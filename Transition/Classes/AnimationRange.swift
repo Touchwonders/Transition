@@ -29,8 +29,8 @@ public typealias AnimationFunction = (Void) -> Void
 public typealias AnimationFraction = TimeInterval
 
 public struct AnimationRange {
-    let start: AnimationFraction // A value between 0 and 1 that describes the start point of the animation relative to the time frame of the transition
-    let end: AnimationFraction   // A value between 0 and 1 that describes the end point of the animation relative to the time frame of the transition
+    public let start: AnimationFraction // A value between 0 and 1 that describes the start point of the animation relative to the time frame of the transition
+    public let end: AnimationFraction   // A value between 0 and 1 that describes the end point of the animation relative to the time frame of the transition
     
     public init(start: AnimationFraction, end: AnimationFraction) {
         assert(start >= 0 && start < end, "Start of range should be greater than 0 and less than end of range.")
@@ -41,7 +41,7 @@ public struct AnimationRange {
         self.end = end
     }
     
-    static var full: AnimationRange {
+    public static var full: AnimationRange {
         return AnimationRange(start: 0.0, end: 1.0)
     }
 }

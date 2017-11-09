@@ -36,14 +36,14 @@ public enum TransitionProgress {
     /// step expresses progress as a value relative to the previous progress
     case step(AnimationFraction)
     
-    var value: AnimationFraction {
+    public var value: AnimationFraction {
         switch self {
         case .fractionComplete(let value): return value
         case .step(let value): return value
         }
     }
     
-    var isStep: Bool {
+    public var isStep: Bool {
         switch self {
         case .step(_): return true
         default: return false

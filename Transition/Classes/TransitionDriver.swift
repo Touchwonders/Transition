@@ -248,7 +248,15 @@ internal final class TransitionDriver {
                     animator.addAnimations(layerAnimator.layer.animation)
                     animator.startAnimation()
                 } else {
-                    animator.continueAnimation(withTimingParameters: nil, durationFactor: CGFloat(durationFactor))
+                    // NOTE: THIS IS A TEMPORARY FIX FOR WHAT APPEARS TO BE AN IOS11 REGRESSION
+                    // See this radar: https://openradar.appspot.com/34674968
+                    var timingParameters: UITimingCurveProvider? = nil
+                    if #available(iOS 11.0, *) {
+                        if isReversed {
+                            timingParameters = UICubicTimingParameters(animationCurve: .linear)
+                        }
+                    }
+                    animator.continueAnimation(withTimingParameters: timingParameters, durationFactor: CGFloat(durationFactor))
                 }
             case .isAfter:
                 let delay = layerAnimator.effectiveRange.distance(to: totalFractionComplete) * effectiveDuration
@@ -270,6 +278,14 @@ internal final class TransitionDriver {
                     animator.isReversed = isReversed
                     //  The animator is now in "paused" state, and must be stopped first before it can be started with a delay (further down)
                     animator.stopAnimation(true)
+                    
+                    //  Only the progressLayerAnimator should be taken into account by the completionCoordinator.
+                    //  Although it should be impossible to have a layerPostion after this layer, the following is
+                    //  just a safeguard to ensure proper completion.
+                    if animator == progressLayerAnimator.animator {
+                        completionCoordinator.add(animator: animator)
+                    }
+                    
                     //  Set it as the new animator for this layer
                     layerAnimator.animator = animator
                     
@@ -311,7 +327,7 @@ internal final class TransitionDriver {
             let progress = interactionController.progress(in: operationContext)
             
             // Calculate the new fractionComplete
-            let currentFractionComplete = progress.isStep ? (totalFractionComplete + progress.value) : progress.value
+            let currentFractionComplete = min(max(0.0, progress.isStep ? (totalFractionComplete + progress.value) : progress.value), 1.0)
             
             for layerAnimator in layerAnimators {
                 let relativeFractionComplete = layerAnimator.effectiveRange.relativeFractionComplete(to: currentFractionComplete)
