@@ -24,14 +24,11 @@
 import UIKit
 import Transition
 
-class ZoomTransition: TransitionAnimation {
+class FadeTransition: TransitionAnimation {
     
     private var operation: TransitionOperation
     private var operationContext: TransitionOperationContext!
     private var context: UIViewControllerContextTransitioning!
-    
-    var scale: CGFloat = 1
-    var translation: CGPoint = .zero
     
     init(for operation: TransitionOperation) {
         self.operation = operation
@@ -40,7 +37,7 @@ class ZoomTransition: TransitionAnimation {
     func setup(in operationContext: TransitionOperationContext) {
         self.operationContext = operationContext
         context = operationContext.context
-        context.containerView.backgroundColor = UIColor(red: 82/255, green: 77/255, blue: 153/255, alpha: 1)
+        context.containerView.backgroundColor = UIColor(red: 82.0/255.0, green: 77.0/255.0, blue: 153.0/255.0, alpha: 1.0)
         context.toView.frame = context.finalFrame(for: context.toViewController)
         if isPresenting {
             context.containerView.addSubview(context.toView)
@@ -48,13 +45,11 @@ class ZoomTransition: TransitionAnimation {
             context.containerView.insertSubview(context.toView, at: 0)
         }
         
-        if isPresenting {
-            context.toView.alpha = 0
-        }
+        context.toView.alpha = 0
     }
     
     func completion(position: UIViewAnimatingPosition) {
-        context.fromView.alpha = 1
+        context.fromView.alpha = 1.0
         
         if position != .end {
             context.toView.removeFromSuperview()
@@ -63,8 +58,8 @@ class ZoomTransition: TransitionAnimation {
     
     var layers: [AnimationLayer] {
         return [
-            AnimationLayer(range: AnimationRange(start: 0, end: 0.2), timingParameters: AnimationTimingParameters(controlPoint1: CGPoint(x: 0, y: 0), controlPoint2: CGPoint(x: 1, y: 1)), animation: earlyFadeOut),
-            AnimationLayer(range: AnimationRange(start: 0.1, end: 0.4), timingParameters: AnimationTimingParameters(controlPoint1: CGPoint(x: 0, y: 0), controlPoint2: CGPoint(x: 1, y: 1)), animation: delayedFadeIn)
+            AnimationLayer(range: AnimationRange(start: 0.0, end: 0.2), timingParameters: AnimationTimingParameters(controlPoint1: CGPoint(x: 0.0, y: 0.0), controlPoint2: CGPoint(x: 1.0, y: 1.0)), animation: earlyFadeOut),
+            AnimationLayer(range: AnimationRange(start: 0.1, end: 0.4), timingParameters: AnimationTimingParameters(controlPoint1: CGPoint(x: 0.0, y: 0.0), controlPoint2: CGPoint(x: 1.0, y: 1.0)), animation: delayedFadeIn)
         ]
     }
     
@@ -80,9 +75,7 @@ class ZoomTransition: TransitionAnimation {
     
     var delayedFadeIn: AnimationFunction {
         return {
-            if self.isPresenting {
-                self.context.toView.alpha = 1
-            }
+            self.context.toView.alpha = 1
         }
     }
 }

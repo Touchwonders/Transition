@@ -164,8 +164,8 @@ extension InteractiveZoomTransitionController {
 extension InteractiveZoomTransitionController : TransitionsSource {
     
     func transitionFor(operationContext: TransitionOperationContext, interactionController: TransitionInteractionController?) -> Transition {
-        let zoomTransition = ZoomTransition(for: operationContext.operation)
+        let fadeTransition = FadeTransition(for: operationContext.operation)
         let interactiveZoomTransition = interactionController.flatMap { InteractiveZoomTransition(interactionController: $0) }
-        return Transition(duration: 0.8, animation: zoomTransition, sharedElement: interactiveZoomTransition)
+        return Transition(duration: 0.8, animation: fadeTransition, sharedElement: interactiveZoomTransition)
     }
 }
