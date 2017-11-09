@@ -1,0 +1,6 @@
+framework module Transition {
+  umbrella header "Transition-umbrella.h"
+
+  export *
+  module * { export * }
+}
