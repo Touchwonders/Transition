@@ -72,6 +72,9 @@ internal final class TransitionDriver {
     
     // Returns the current overall fractionComplete of the transition
     private var totalFractionComplete: AnimationFraction {
+        if progressLayerAnimator.animator.isReversed {
+            return 1.0 - AnimationFraction(progressLayerAnimator.animator.fractionComplete)
+        }
         return AnimationFraction(progressLayerAnimator.animator.fractionComplete)
     }
     
@@ -250,7 +253,7 @@ internal final class TransitionDriver {
             case .isAfter:
                 let delay = layerAnimator.effectiveRange.distance(to: totalFractionComplete) * effectiveDuration
                 //  The layer should animate after a specific delay.
-                if animator.state == .inactive && durationFactor == 1.0 {
+                if animator.state == .inactive && durationFactor.isEqual(to: 1.0) {
                     //  this only happens when the animation is started programmatically. FractionComplete will be 0, durationFactor will be 1.
                     animator.addAnimations(layerAnimator.layer.animation)
                     animator.startAnimation(afterDelay: delay)
@@ -264,7 +267,9 @@ internal final class TransitionDriver {
                     
                     //  Create a new animator
                     let animator = propertyAnimatorFor(animationLayer: layerAnimator.layer, durationFactor: durationFactor)
-                    completionCoordinator.add(animator: animator)
+                    animator.isReversed = isReversed
+                    //  The animator is now in "paused" state, and must be stopped first before it can be started with a delay (further down)
+                    animator.stopAnimation(true)
                     //  Set it as the new animator for this layer
                     layerAnimator.animator = animator
                     
