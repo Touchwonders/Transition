@@ -40,6 +40,15 @@ internal final class TransitionDriver {
     private var sharedElementAnimator: UIViewPropertyAnimator? /// This might be set after init, depending on the presence of both an interactive element and a specification
     
     
+    private var allAnimators: [UIViewPropertyAnimator] {
+        var animators: [UIViewPropertyAnimator] = layerAnimators.map { $0.animator }
+        if let sharedElementAnimator = sharedElementAnimator {
+            animators.append(sharedElementAnimator)
+        }
+        return animators
+    }
+    
+    
     var context: UIViewControllerContextTransitioning {
         return operationContext.context
     }
@@ -163,6 +172,17 @@ internal final class TransitionDriver {
             animate(.end)
         }
     }
+    
+    
+    deinit {
+        // Ensure no animator is unfinished (otherwise an iOS system exception is thrown)
+        completionCoordinator.invalidate()
+        allAnimators.forEach {
+            $0.stopAnimation(false)
+            $0.finishAnimation(at: .current)
+        }
+    }
+    
     
     // MARK: Property Animators
     
