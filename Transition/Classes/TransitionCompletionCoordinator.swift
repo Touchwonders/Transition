@@ -61,4 +61,8 @@ internal class TransitionCompletionCoordinator {
         }
     }
     
+    func invalidate() {
+        self.completionWorkItem?.cancel()
+        self.completion = nil
+    }
 }
