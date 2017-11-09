@@ -28,16 +28,19 @@ import UIKit
 /**
  *  The AnimationLayer is a set of specifications for an animation.
  *  The developer will be prompt to give a collection of these animation layers that combined will be the total transition.
+ *  You can give the animationLayer a descriptive identifier for debugging purposes.
  */
 public struct AnimationLayer {
     public let range: AnimationRange
     public let timingParameters: AnimationTimingParameters
     public let animation: AnimationFunction
+    public var identifier: String?
     
-    public init(range: AnimationRange = .full, timingParameters: AnimationTimingParameters, animation: @escaping AnimationFunction) {
+    public init(range: AnimationRange = .full, timingParameters: AnimationTimingParameters, animation: @escaping AnimationFunction, identifier: String? = nil) {
         self.range = range
         self.timingParameters = timingParameters
         self.animation = animation
+        self.identifier = identifier
     }
 }
 
@@ -62,5 +65,9 @@ internal class AnimationLayerAnimator {
         self.layer = layer
         self.animator = animator
         effectiveRange = layer.range
+    }
+    
+    internal var identifier: String? {
+        return layer.identifier
     }
 }
