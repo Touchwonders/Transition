@@ -58,8 +58,8 @@ class FadeTransition: TransitionAnimation {
     
     var layers: [AnimationLayer] {
         return [
-            AnimationLayer(range: AnimationRange(start: 0.0, end: 0.2), timingParameters: AnimationTimingParameters(controlPoint1: CGPoint(x: 0.0, y: 0.0), controlPoint2: CGPoint(x: 1.0, y: 1.0)), animation: earlyFadeOut),
-            AnimationLayer(range: AnimationRange(start: 0.1, end: 0.4), timingParameters: AnimationTimingParameters(controlPoint1: CGPoint(x: 0.0, y: 0.0), controlPoint2: CGPoint(x: 1.0, y: 1.0)), animation: delayedFadeIn)
+            AnimationLayer(range: AnimationRange(start: 0.0, end: 0.2), timingParameters: AnimationTimingParameters(controlPoint1: CGPoint(x: 0.0, y: 0.0), controlPoint2: CGPoint(x: 1.0, y: 1.0)), animation: earlyFadeOut, identifier: "earlyFadeOut"),
+            AnimationLayer(range: AnimationRange(start: 0.1, end: 0.4), timingParameters: AnimationTimingParameters(controlPoint1: CGPoint(x: 0.0, y: 0.0), controlPoint2: CGPoint(x: 1.0, y: 1.0)), animation: delayedFadeIn, identifier: "delayedFadeIn")
         ]
     }
     
