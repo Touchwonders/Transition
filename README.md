@@ -4,6 +4,7 @@
 
 [![CocoaPods version](https://img.shields.io/cocoapods/v/Transition.svg)](https://cocoapods.org/pods/Transition) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![license](https://img.shields.io/github/license/Touchwonders/transition.svg)](https://github.com/Touchwonders/Transition/blob/master/LICENSE) [![platform](https://cocoapod-badges.herokuapp.com/p/Transition/badge.png)]()
 
+
 ## Introduction
 **Transition** is a library that helps you build iOS view controller transitions. 
 Implementing a nice interactive custom view controller transition involves quite a number of components. You have to implement the correct delegates, handle the switching between passive animation and active interaction phases, ensure the timing is right, think of interruption and cancellation, keep responsibilities separated... It quickly gets messy! This is where Transition helps you out: you just define the animation and the interaction, Transition ties it all together.
@@ -162,8 +163,17 @@ Transition is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "Transition"
+pod 'Transition'
 ```
+
+#### Swift 4
+
+Transition is now also available in Swift 4:
+
+```ruby
+pod 'Transition', :git => 'https://github.com/Touchwonders/Transition.git', :branch => 'swift4'
+```
+
 
 ## Your input is welcome!
 If you have any suggestions, please get in touch [with us](https://twitter.com/touchwonders). Feel free to fork and submit pull requests. Also, we're Dutch, so if any naming is odd, might be improved or is just plain inappropriate, let us know!
