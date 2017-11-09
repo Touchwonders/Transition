@@ -78,7 +78,7 @@ class ShapeInteractionController : NSObject, TransitionInteractionController {
     
     /// We register for the gesture to set the touch offset on the selected shape every time 
     /// that shapeView is touched (might be multiple times during transition).
-    func gestureStateChanged(_ gestureRecognizer: UIPanGestureRecognizer) {
+    @objc func gestureStateChanged(_ gestureRecognizer: UIPanGestureRecognizer) {
         if gestureRecognizer.state == .began, let transitioningShapeView = transitioningShapeView, let view = gestureRecognizer.view {
             let gestureLocationInView = gestureRecognizer.location(in: view)
             transitioningShapeView.touchOffset = gestureLocationInView - view.convert(transitioningShapeView.transitioningView.center, from: transitioningShapeView.transitioningView.superview)
