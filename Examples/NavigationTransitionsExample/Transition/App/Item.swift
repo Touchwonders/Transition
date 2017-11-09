@@ -74,6 +74,8 @@ class Item {
     }
 }
 
+extension Item : Equatable {}
+
 
 extension UIImage {
     

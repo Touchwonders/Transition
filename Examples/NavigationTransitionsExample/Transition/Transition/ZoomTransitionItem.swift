@@ -24,9 +24,12 @@
 import UIKit
 import Transition
 
-class ZoomTransitionItem: NSObject {
+class ZoomTransitionItem: NSObject, SharedElement {
     var initialFrame: CGRect
     var targetFrame: CGRect
+    
+    /// SharedElement:
+    var transitioningView: UIView
     
     var image: UIImage? {
         get {
@@ -37,20 +40,15 @@ class ZoomTransitionItem: NSObject {
     }
     
     weak var imageView: UIImageView?
+    
     var touchOffset: CGVector = .zero
     
-    init(initialFrame: CGRect, targetFrame: CGRect, imageView: UIImageView?) {
+    init(initialFrame: CGRect, targetFrame: CGRect, imageView: UIImageView) {
         self.initialFrame = initialFrame
         self.targetFrame = targetFrame
         self.imageView = imageView
         
+        self.transitioningView = imageView.snapshot()
         super.init()
-    }
-}
-
-extension ZoomTransitionItem: SharedElement {
-    
-    var transitioningView: UIView {
-        return imageView!
     }
 }

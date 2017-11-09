@@ -28,6 +28,8 @@ import AVFoundation
 
 class CollectionViewController: UIViewController {
     
+    static let margin: CGFloat = 10.0
+    
     let items = Item.allItems()
     var selected: Item?
     var selectedImage: UIImageView?
@@ -63,7 +65,7 @@ class CollectionViewController: UIViewController {
         navigationController?.interactivePopGestureRecognizer?.delegate = self
         
         if let selected = selected {
-            let margin: CGFloat = 10
+            let margin = type(of: self).margin
             
             header = CollectionViewCell(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
             guard let header = header else { return }

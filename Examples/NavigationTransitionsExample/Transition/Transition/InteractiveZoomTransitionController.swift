@@ -64,16 +64,14 @@ extension InteractiveZoomTransitionController : SharedElementProvider {
         
         let isPresenting = operationContext.operation.isPresenting
         
-        let initialFrame: CGRect!
-        let targetFrame: CGRect!
+        let initialFrame: CGRect
+        let targetFrame: CGRect
         
         if isPresenting {
             initialFrame = fromViewController.targetFrame
-            targetFrame = header.image.frame
-            targetFrame.origin.x += 10
-            targetFrame.origin.y += 10
+            targetFrame = CGRect(origin: CGPoint(x: CollectionViewController.margin, y: CollectionViewController.margin), size: header.image.frame.size)
         } else {
-            initialFrame = header.image.frame
+            initialFrame = CGRect(origin: CGPoint(x: CollectionViewController.margin, y: CollectionViewController.margin), size: header.image.frame.size)
             targetFrame = toViewController.targetFrame
         }
         

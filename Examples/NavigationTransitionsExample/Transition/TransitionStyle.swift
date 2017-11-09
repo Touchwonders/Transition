@@ -27,9 +27,9 @@ import UIKit
 // MARK: Colors
 
 func color(_ index: Int) -> UIColor {
-    let colors = [UIColor(red:255/255, green:64/255, blue:159/255, alpha:1),
-                  UIColor(red:51/255, green:255/255, blue:85/255, alpha:1),
-                  UIColor(red:255/255, green:234/255, blue:0/255, alpha:1),
-                  UIColor(red:26/255, green:217/255, blue:255/255, alpha:1)]
+    let colors = [UIColor(red: 255.0 / 255.0, green: 64.0 / 255.0, blue: 159.0 / 255.0, alpha: 1.0),
+                  UIColor(red: 51.0 / 255.0, green: 255.0 / 255.0, blue: 85.0 / 255.0, alpha: 1.0),
+                  UIColor(red: 255.0 / 255.0, green: 234.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0),
+                  UIColor(red: 26.0 / 255.0, green: 217.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0)]
     return colors[index % colors.count]
 }

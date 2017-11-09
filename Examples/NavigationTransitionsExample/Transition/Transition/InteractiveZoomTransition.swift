@@ -27,7 +27,7 @@ import Transition
 class InteractiveZoomTransition : SharedElementTransition {
     
     private struct State {
-        let snapShotFrame: CGRect
+        let sharedElementFrame: CGRect
         let toViewTransform: CGAffineTransform
         let fromViewTransform: CGAffineTransform
     }
@@ -44,24 +44,23 @@ class InteractiveZoomTransition : SharedElementTransition {
         return AnimationTimingParameters(mass: 0.1, stiffness: 15, damping: 2.0, initialVelocity: CGVector(dx: 0, dy: 0))
     }
     
-    var snapshot: UIImageView?
     var selectedImage: UIImageView?
     private var initialState: State!
     private var targetState: State!
+    
+    private var sharedElementTransitioningView: UIView? {
+        return (sharedElement as? ZoomTransitionItem)?.transitioningView
+    }
+    
     
     func setup(in operationContext: TransitionOperationContext) {
         self.operationContext = operationContext
         self.context = operationContext.context
         
         guard let item = sharedElement as? ZoomTransitionItem else { return }
-        guard let itemImageView = ((isPresenting ? context.toViewController : context.fromViewController) as! CollectionViewController).header?.image else { return }
+        guard let itemImageView = item.imageView else { return }
         
-        var frame = item.initialFrame
-        frame.origin.x += 10
-        frame.origin.y += 10
-        
-        snapshot = itemImageView.snapshot()
-        
+        /// The selectedImage is 
         if isPresenting, let fromViewController = context.fromViewController as? CollectionViewController, let selectedImage = fromViewController.selectedImage {
             self.selectedImage = selectedImage
         } else if !isPresenting, let toViewController = context.toViewController as? CollectionViewController, let selectedImage = toViewController.selectedImage {
@@ -69,35 +68,32 @@ class InteractiveZoomTransition : SharedElementTransition {
         }
         self.selectedImage?.isHidden = true
         
-        if let snapshot = snapshot {
-            snapshot.frame = frame
-            context.containerView.addSubview(snapshot)
-            item.imageView?.isHidden = true
-        }
+        /// The transitioningView is a snapshot of the imageView that can be moved safely inside the transitionContext, keeping the original imageView in its view hierarchy:
+        let transitioningView = item.transitioningView
+        transitioningView.frame = item.initialFrame
+        context.containerView.addSubview(transitioningView)
+        itemImageView.isHidden = true
+
         
         let scale = item.targetFrame.width / item.initialFrame.width
         let scaleTransform = CGAffineTransform(scaleX: scale, y: scale)
-        
+
         let origin = CGVector(dx: item.initialFrame.origin.x - context.fromView.bounds.midX, dy: item.initialFrame.origin.y - context.fromView.bounds.midY)
         let scaled = CGVector(dx: origin.dx * scale, dy: origin.dy * scale)
         let delta = CGVector(dx: origin.dx - scaled.dx, dy: origin.dy - scaled.dy)
-        
+
         let translation = CGPoint(x: item.targetFrame.origin.x - item.initialFrame.origin.x, y: item.targetFrame.origin.y - item.initialFrame.origin.y)
         let translationTransform = CGAffineTransform(translationX: translation.x + delta.dx, y: translation.y + delta.dy)
-        
+
         let fromViewTransform = scaleTransform.concatenating(translationTransform)
-        let toViewTransform = CGAffineTransform(a: 1 / fromViewTransform.a, b: 0, c: 0, d: 1 / fromViewTransform.d, tx: -fromViewTransform.tx, ty: -fromViewTransform.ty)   //  the inverse of fromViewTransform
+        let toViewTransform = fromViewTransform.inverted()
         
-        if context.toView.transform.isIdentity {
-            context.toView.transform = toViewTransform
-        }
-        
-        initialState = State(snapShotFrame: frame, toViewTransform: toViewTransform, fromViewTransform: .identity)
-        targetState = State(snapShotFrame: item.targetFrame, toViewTransform: .identity, fromViewTransform: fromViewTransform)
+        initialState = State(sharedElementFrame: item.initialFrame, toViewTransform: toViewTransform, fromViewTransform: .identity)
+        targetState = State(sharedElementFrame: item.targetFrame, toViewTransform: .identity, fromViewTransform: fromViewTransform)
     }
     
     private func applyState(_ state: State) {
-        snapshot?.frame = state.snapShotFrame
+        sharedElementTransitioningView?.frame = state.sharedElementFrame
         context.toView.transform = state.toViewTransform
         context.fromView.transform = state.fromViewTransform
     }
@@ -118,7 +114,7 @@ class InteractiveZoomTransition : SharedElementTransition {
         guard let item = sharedElement as? ZoomTransitionItem else { return }
         context.fromView.transform = .identity
         context.toView.transform = .identity
-        snapshot?.removeFromSuperview()
+        sharedElementTransitioningView?.removeFromSuperview()
         item.imageView?.isHidden = false
         selectedImage?.isHidden = false
     }
@@ -130,43 +126,43 @@ class InteractiveZoomTransition : SharedElementTransition {
         let locationInContainer = gestureRecognizer.location(in: context.containerView)
         if let view = context.containerView.hitTest(locationInContainer, with: nil), view == sharedElement?.transitioningView {
             guard let item = sharedElement as? ZoomTransitionItem else { return }
-            guard let snapshot = snapshot else { return }
-            item.touchOffset = CGVector(dx: locationInContainer.x - snapshot.center.x, dy: locationInContainer.y - snapshot.center.y)
+            guard let transitioningView = sharedElementTransitioningView else { return }
+            item.touchOffset = CGVector(dx: locationInContainer.x - transitioningView.center.x, dy: locationInContainer.y - transitioningView.center.y)
         }
     }
     
     public func updateInteraction(in context: UIViewControllerContextTransitioning, interactionController: TransitionInteractionController, progress: TransitionProgress) {
         guard let gesture = interactionController.gestureRecognizer as? UIPanGestureRecognizer else { return }
         guard let item = sharedElement as? ZoomTransitionItem else { return }
+        let transitioningView = item.transitioningView
         
         let translationInView = gesture.translation(in: gesture.view)
-        
         context.fromView.transform = CGAffineTransform(translationX: 0.0, y: max(0.0, translationInView.y))
+        
         
         switch progress {
         case .fractionComplete(let fraction):
             let scale = item.initialFrame.width / item.targetFrame.width
-            
+
             let origin = CGVector(dx: item.targetFrame.origin.x - context.toView.bounds.midX, dy: item.targetFrame.origin.y - context.toView.bounds.midY)
             let scaled = CGVector(dx: origin.dx * scale, dy: origin.dy * scale)
             let delta = CGVector(dx: origin.dx - scaled.dx, dy: origin.dy - scaled.dy)
-            
+
             let translation = CGPoint(x: item.initialFrame.origin.x - item.targetFrame.origin.x, y: item.initialFrame.origin.y - item.targetFrame.origin.y)
             let translationTransform = CGAffineTransform(translationX: translation.x + delta.dx, y: translation.y + delta.dy)
             
             var transform = context.toView.transform
-            transform.a = scale - (CGFloat(fraction) * (scale - 1))
-            transform.d = scale - (CGFloat(fraction) * (scale - 1))
+            transform.a = scale - (CGFloat(fraction) * (scale - 1.0))
+            transform.d = scale - (CGFloat(fraction) * (scale - 1.0))
             transform.tx = translationTransform.tx - (CGFloat(fraction) * translationTransform.tx)
             transform.ty = translationTransform.ty - (CGFloat(fraction) * translationTransform.ty)
             context.toView.transform = transform
-            
-            guard let snapshot = snapshot else { return }
-            var snapshotFrame = snapshot.frame
-            snapshotFrame.size.width = item.initialFrame.width - (CGFloat(fraction) * (item.initialFrame.width - item.targetFrame.width))
-            snapshotFrame.size.height = item.initialFrame.height - (CGFloat(fraction) * (item.initialFrame.height - item.targetFrame.height))
-            snapshot.frame = snapshotFrame
-            snapshot.center = CGPoint(x: (item.initialFrame.midX + 10) + translationInView.x, y: (item.initialFrame.midY + 10) + translationInView.y)
+
+            var sharedElementFrame = transitioningView.frame
+            sharedElementFrame.size.width = item.initialFrame.width - (CGFloat(fraction) * (item.initialFrame.width - item.targetFrame.width))
+            sharedElementFrame.size.height = item.initialFrame.height - (CGFloat(fraction) * (item.initialFrame.height - item.targetFrame.height))
+            transitioningView.frame = sharedElementFrame
+            transitioningView.center = CGPoint(x: (item.initialFrame.midX + 10.0) + translationInView.x, y: (item.initialFrame.midY + 10.0) + translationInView.y)
         default: return
         }
     }
