@@ -270,6 +270,7 @@ internal final class TransitionDriver {
                         animator.startAnimation(afterDelay: delay)
                     } else {
                         animator.stopAnimation(true)
+                        animator.addAnimations(layerAnimator.layer.animation)
                         animator.startAnimation(afterDelay: delay)
                     }
                 } else {
