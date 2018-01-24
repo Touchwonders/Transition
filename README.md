@@ -166,15 +166,6 @@ it, simply add the following line to your Podfile:
 pod 'Transition'
 ```
 
-#### Swift 4
-
-Transition is now also available in Swift 4:
-
-```ruby
-pod 'Transition', :git => 'https://github.com/Touchwonders/Transition.git', :branch => 'swift4'
-```
-
-
 ## Your input is welcome!
 If you have any suggestions, please get in touch [with us](https://twitter.com/touchwonders). Feel free to fork and submit pull requests. Also, we're Dutch, so if any naming is odd, might be improved or is just plain inappropriate, let us know!
 
