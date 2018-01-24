@@ -1,6 +1,6 @@
 {
   "name": "Transition",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "summary": "Easy interactive interruptible custom ViewController transitions.",
   "description": "Transition makes building interactive interruptible custom view controller transitions easy! You just define the animation and interaction, Transition ties it all together.",
   "homepage": "https://github.com/Touchwonders/Transition",
@@ -15,7 +15,7 @@
   "social_media_url": "https://twitter.com/touchwonders",
   "source": {
     "git": "https://github.com/Touchwonders/Transition.git",
-    "tag": "1.0.1"
+    "tag": "1.1.0"
   },
   "platforms": {
     "ios": "10.0"

@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             myTransitions = MyNavigationTransitions(navigationController: navigationController)
             
             if let font = UIFont(name: "ArialRoundedMTBold", size: 20.0) {
-                navigationController.navigationBar.titleTextAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.white]
+                navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: font, NSAttributedStringKey.foregroundColor: UIColor.white]
             }
         }
         

@@ -220,7 +220,7 @@ public final class TransitionController : NSObject {
     
     
     /// The callback of the interactionController's gesture recognizer
-    func interactiveTransitionGestureChanged(gestureRecognizer: UIGestureRecognizer) {
+    @objc func interactiveTransitionGestureChanged(gestureRecognizer: UIGestureRecognizer) {
         guard let operationController = operationController,
             let operationDelegate = operationDelegate else { return }
         

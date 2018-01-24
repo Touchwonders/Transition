@@ -25,7 +25,7 @@
 import UIKit
 
 
-public typealias AnimationFunction = (Void) -> Void
+public typealias AnimationFunction = () -> Void
 public typealias AnimationFraction = TimeInterval
 
 public struct AnimationRange {
