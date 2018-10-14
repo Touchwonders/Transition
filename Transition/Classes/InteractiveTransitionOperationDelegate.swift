@@ -39,7 +39,7 @@ public protocol InteractiveNavigationTransitionOperationDelegate : InteractiveTr
     /// An interactive transition gesture should lead to either a push or pop. Make it happen.
     /// The gestureRecognizer is passed as additional context for the operation and can be used
     /// on .push to determine what kind of ViewController should be pushed.
-    func performOperation(operation: UINavigationControllerOperation, forInteractiveTransitionIn controller: UINavigationController, gestureRecognizer: UIGestureRecognizer)
+    func performOperation(operation: UINavigationController.Operation, forInteractiveTransitionIn controller: UINavigationController, gestureRecognizer: UIGestureRecognizer)
 }
 
 

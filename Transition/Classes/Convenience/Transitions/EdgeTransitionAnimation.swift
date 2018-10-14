@@ -46,7 +46,7 @@ open class EdgeTransitionAnimation : TransitionAnimation {
         self.transitionEdges = transitionEdges
     }
     
-    open let transitionEdges: TransitionEdges
+    public let transitionEdges: TransitionEdges
     
     
     open func setup(in operationContext: TransitionOperationContext) {
@@ -62,7 +62,7 @@ open class EdgeTransitionAnimation : TransitionAnimation {
         /// This should be implemented by a subclass
     }
     
-    open var animationCurve: UIViewAnimationCurve = .easeInOut
+    open var animationCurve: UIView.AnimationCurve = .easeInOut
     
     /// Convenience functions
     

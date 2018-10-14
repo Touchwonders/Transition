@@ -420,8 +420,8 @@ internal final class TransitionDriver {
 fileprivate extension TransitionDriver {
     
     private var uniqueTransitionPhaseDelegates: [TransitionPhaseDelegate] {
-        let uniqueParticipatingViewControllers = Array(Set([context.fromViewController, context.toViewController, operationContext.sourceViewController].flatMap { $0 }))
-        return uniqueParticipatingViewControllers.flatMap { $0 as? TransitionPhaseDelegate }
+        let uniqueParticipatingViewControllers = Array(Set([context.fromViewController, context.toViewController, operationContext.sourceViewController].compactMap { $0 }))
+        return uniqueParticipatingViewControllers.compactMap { $0 as? TransitionPhaseDelegate }
     }
     
     fileprivate func willTransition(with sharedElement: SharedElement?) {

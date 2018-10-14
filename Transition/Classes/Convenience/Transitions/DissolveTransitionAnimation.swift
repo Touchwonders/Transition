@@ -26,7 +26,7 @@ open class DissolveTransitionAnimation : TransitionAnimation {
     
     public init() {}
     
-    open var animationCurve: UIViewAnimationCurve = .easeInOut
+    open var animationCurve: UIView.AnimationCurve = .easeInOut
     
     private weak var topView: UIView?
     private var targetAlpha: CGFloat = 0.0

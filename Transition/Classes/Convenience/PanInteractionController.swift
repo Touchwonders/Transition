@@ -72,7 +72,7 @@ open class PanInteractionController : TransitionInteractionController {
     }
     
     
-    open let panGestureRecognizer = UIPanGestureRecognizer()
+    public let panGestureRecognizer = UIPanGestureRecognizer()
     open var gestureRecognizer: UIGestureRecognizer { return panGestureRecognizer }
     
     weak open var sharedElementProvider: SharedElementProvider? = nil
