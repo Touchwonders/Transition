@@ -47,7 +47,7 @@ public class UINavigationControllerDelegateProxy : DelegateProxy<UINavigationCon
         return firstDelegateRespondingTo(#selector(navigationController(_:interactionControllerFor:)))?.navigationController?(navigationController, interactionControllerFor: animationController)
     }
     
-    public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return firstDelegateRespondingTo(#selector(navigationController(_:animationControllerFor:from:to:)))?.navigationController?(navigationController, animationControllerFor: operation, from: fromVC, to: toVC)
     }
     

@@ -64,7 +64,7 @@ public protocol TransitionInteractionController : class {
     
     
     /// If the transition has an interactive element, it should be provided by this source.
-    weak var sharedElementProvider: SharedElementProvider? { get }
+    var sharedElementProvider: SharedElementProvider? { get }
     
     // MARK: Direction
     

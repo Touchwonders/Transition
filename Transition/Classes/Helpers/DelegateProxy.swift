@@ -46,7 +46,7 @@ public class DelegateProxy<DelegateType: NSObjectProtocol> : NSObject {
     }
     
     internal var delegates: [DelegateType] {
-        return [primaryDelegate, secondaryDelegate].flatMap({$0})
+        return [primaryDelegate, secondaryDelegate].compactMap({$0})
     }
     
     internal func firstDelegateRespondingTo(_ selector: Selector) -> DelegateType? {

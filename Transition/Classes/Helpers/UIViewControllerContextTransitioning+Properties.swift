@@ -79,7 +79,7 @@ public extension UIViewControllerContextTransitioning {
         }
     }
     
-    public func defaultViewSetup(for navigationOperation: UINavigationControllerOperation) -> UIView? {
+    public func defaultViewSetup(for navigationOperation: UINavigationController.Operation) -> UIView? {
         switch navigationOperation {
         case .push:
             containerView.addSubview(toView)

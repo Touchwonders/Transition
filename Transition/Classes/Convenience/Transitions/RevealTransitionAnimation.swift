@@ -41,7 +41,7 @@ open class RevealTransitionAnimation : EdgeTransitionAnimation {
         /// By default, the toView is installed above the fromView, returning the toView as the topView.
         /// For this transtion, we require the fromView to be positioned above the toView.
         let bottomView = (topView == context.toView) ? context.fromView : context.toView
-        context.containerView.bringSubview(toFront: bottomView!)
+        context.containerView.bringSubviewToFront(bottomView!)
         self.topView = bottomView
         self.bottomView = topView
         

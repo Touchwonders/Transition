@@ -33,7 +33,7 @@ public protocol TransitionOperationType {}
 
 
 
-extension UINavigationControllerOperation: TransitionOperationType {}
+extension UINavigationController.Operation: TransitionOperationType {}
 
 /**
  *  A transition operation that can be performed on a UITabBarController.
@@ -75,13 +75,13 @@ extension UIViewControllerModalOperation: TransitionOperationType {}
  */
 public enum TransitionOperation {
     case none
-    case navigation(UINavigationControllerOperation)
+    case navigation(UINavigationController.Operation)
     case modal(UIViewControllerModalOperation)
     case tabBar(UITabBarControllerOperation)
     
     public init<T>(_ operation: T) where T: TransitionOperationType {
         switch operation {
-        case let operation as UINavigationControllerOperation:
+        case let operation as UINavigationController.Operation:
             self = .navigation(operation)
         case let operation as UIViewControllerModalOperation:
             self = .modal(operation)

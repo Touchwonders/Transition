@@ -39,7 +39,7 @@ public struct AnimationTimingParameters {
     public let hasImplicitDuration: Bool
     
     
-    public init(animationCurve curve: UIViewAnimationCurve) {
+    public init(animationCurve curve: UIView.AnimationCurve) {
         timingCurveProvider = UICubicTimingParameters(animationCurve: curve)
         hasImplicitDuration = false
     }
