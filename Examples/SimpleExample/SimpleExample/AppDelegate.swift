@@ -38,16 +38,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return window?.rootViewController as? UINavigationController
     }
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         if let navigationController = navigationController {
             navigationController.interactivePopGestureRecognizer?.isEnabled = false
             myTransitions = MyNavigationTransitions(navigationController: navigationController)
-            
+
             if let font = UIFont(name: "ArialRoundedMTBold", size: 20.0) {
-                navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: font, NSAttributedStringKey.foregroundColor: UIColor.white]
+                navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: font, NSAttributedString.Key.foregroundColor: UIColor.white]
             }
         }
-        
+
         return true
     }
 }

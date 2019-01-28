@@ -81,7 +81,7 @@ extension CatalogMenu : TransitionsSource {
 
 extension CatalogMenu : InteractiveNavigationTransitionOperationDelegate {
     
-    func performOperation(operation: UINavigationControllerOperation, forInteractiveTransitionIn controller: UINavigationController, gestureRecognizer: UIGestureRecognizer) {
+    func performOperation(operation: UINavigationController.Operation, forInteractiveTransitionIn controller: UINavigationController, gestureRecognizer: UIGestureRecognizer) {
         switch operation {
         case .push:
             if selectedIndex == nil {

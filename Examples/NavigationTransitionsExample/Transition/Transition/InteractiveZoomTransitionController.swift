@@ -85,7 +85,7 @@ extension InteractiveZoomTransitionController : SharedElementProvider {
 
 extension InteractiveZoomTransitionController {
     
-    func performOperation(operation: UINavigationControllerOperation, forInteractiveTransitionIn controller: UINavigationController, gestureRecognizer: UIGestureRecognizer) {
+    func performOperation(operation: UINavigationController.Operation, forInteractiveTransitionIn controller: UINavigationController, gestureRecognizer: UIGestureRecognizer) {
         switch operation {
         case .pop:
             navigationController.popViewController(animated: true)

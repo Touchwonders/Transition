@@ -32,15 +32,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var router: Router!
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         router = Router(start: .collection(nil))
-        
+
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = router.navigationController
         window?.makeKeyAndVisible()
-        
+
         return true
     }
 }

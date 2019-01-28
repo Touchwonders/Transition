@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		360B1187166459691682DDE6 /* Pods_TabBarTransitionsExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7247B6FF3A484DCF10C049B6 /* Pods_TabBarTransitionsExample.framework */; };
+		5A19C7A42B1E45C6E984AC97 /* Pods_TabBarTransitionsExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCA4C3457A7F378B93166326 /* Pods_TabBarTransitionsExample.framework */; };
 		BA39129D1E43388A00F737D3 /* Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA39129C1E43388A00F737D3 /* Convenience.swift */; };
 		BA3C87661E4223C600C37AE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3C87651E4223C600C37AE9 /* AppDelegate.swift */; };
 		BA3C876F1E4223C600C37AE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA3C876E1E4223C600C37AE9 /* Assets.xcassets */; };
@@ -19,9 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2F18EB2086202F85B2844552 /* Pods-TabBarTransitionsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarTransitionsExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TabBarTransitionsExample/Pods-TabBarTransitionsExample.debug.xcconfig"; sourceTree = "<group>"; };
-		56ED30FDF5F8B956911C213D /* Pods-TabBarTransitionsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarTransitionsExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-TabBarTransitionsExample/Pods-TabBarTransitionsExample.release.xcconfig"; sourceTree = "<group>"; };
-		7247B6FF3A484DCF10C049B6 /* Pods_TabBarTransitionsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBarTransitionsExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2681050A60B8D4E69BEA1085 /* Pods-TabBarTransitionsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarTransitionsExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-TabBarTransitionsExample/Pods-TabBarTransitionsExample.release.xcconfig"; sourceTree = "<group>"; };
 		BA39129C1E43388A00F737D3 /* Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Convenience.swift; sourceTree = "<group>"; };
 		BA3912C81E4346B300F737D3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BA3C87621E4223C600C37AE9 /* TabBarTransitionsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabBarTransitionsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,6 +31,8 @@
 		BA3C878A1E42332E00C37AE9 /* ShapeTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeTransitionAnimation.swift; sourceTree = "<group>"; };
 		BA3C878C1E4247E000C37AE9 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BAE5767D1E5EDA3F00E8ABC3 /* TransitionStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionStyle.swift; sourceTree = "<group>"; };
+		D4237D471E720FAA8733650A /* Pods-TabBarTransitionsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarTransitionsExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TabBarTransitionsExample/Pods-TabBarTransitionsExample.debug.xcconfig"; sourceTree = "<group>"; };
+		FCA4C3457A7F378B93166326 /* Pods_TabBarTransitionsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBarTransitionsExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,26 +40,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				360B1187166459691682DDE6 /* Pods_TabBarTransitionsExample.framework in Frameworks */,
+				5A19C7A42B1E45C6E984AC97 /* Pods_TabBarTransitionsExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		080B5F5740716EB3DA5EB973 /* Frameworks */ = {
+		23EFE455C14F7EA3E6DCF36E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7247B6FF3A484DCF10C049B6 /* Pods_TabBarTransitionsExample.framework */,
+				FCA4C3457A7F378B93166326 /* Pods_TabBarTransitionsExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6878CDD258D3FAA78E2F870F /* Pods */ = {
+		501E393C93BBE3E0AB846B7A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2F18EB2086202F85B2844552 /* Pods-TabBarTransitionsExample.debug.xcconfig */,
-				56ED30FDF5F8B956911C213D /* Pods-TabBarTransitionsExample.release.xcconfig */,
+				D4237D471E720FAA8733650A /* Pods-TabBarTransitionsExample.debug.xcconfig */,
+				2681050A60B8D4E69BEA1085 /* Pods-TabBarTransitionsExample.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -70,8 +70,8 @@
 				BA3912C81E4346B300F737D3 /* README.md */,
 				BA3C87641E4223C600C37AE9 /* TabBarTransitionsExample */,
 				BA3C87631E4223C600C37AE9 /* Products */,
-				6878CDD258D3FAA78E2F870F /* Pods */,
-				080B5F5740716EB3DA5EB973 /* Frameworks */,
+				501E393C93BBE3E0AB846B7A /* Pods */,
+				23EFE455C14F7EA3E6DCF36E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,12 +130,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA3C87761E4223C600C37AE9 /* Build configuration list for PBXNativeTarget "TabBarTransitionsExample" */;
 			buildPhases = (
-				46F38C12C516C94773FE5654 /* [CP] Check Pods Manifest.lock */,
+				32049790734A8BE98B7B48A7 /* [CP] Check Pods Manifest.lock */,
 				BA3C875E1E4223C600C37AE9 /* Sources */,
 				BA3C875F1E4223C600C37AE9 /* Frameworks */,
 				BA3C87601E4223C600C37AE9 /* Resources */,
-				AE9CB77280C541658525F9D7 /* [CP] Embed Pods Frameworks */,
-				EC8D2B6C6472089A6B237F27 /* [CP] Copy Pods Resources */,
+				8E6E0728476C4DDE39514996 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -153,7 +152,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Touchwonders;
 				TargetAttributes = {
 					BA3C87611E4223C600C37AE9 = {
@@ -194,16 +193,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		46F38C12C516C94773FE5654 /* [CP] Check Pods Manifest.lock */ = {
+		32049790734A8BE98B7B48A7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-TabBarTransitionsExample-checkManifestLockResult.txt",
 			);
@@ -212,37 +215,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AE9CB77280C541658525F9D7 /* [CP] Embed Pods Frameworks */ = {
+		8E6E0728476C4DDE39514996 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TabBarTransitionsExample/Pods-TabBarTransitionsExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Transition/Transition.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Transition.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TabBarTransitionsExample/Pods-TabBarTransitionsExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EC8D2B6C6472089A6B237F27 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TabBarTransitionsExample/Pods-TabBarTransitionsExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -284,15 +276,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -333,15 +333,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -368,7 +376,7 @@
 		};
 		BA3C87771E4223C600C37AE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F18EB2086202F85B2844552 /* Pods-TabBarTransitionsExample.debug.xcconfig */;
+			baseConfigurationReference = D4237D471E720FAA8733650A /* Pods-TabBarTransitionsExample.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -377,13 +385,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.touchwonders.TabBarTransitionsExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		BA3C87781E4223C600C37AE9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56ED30FDF5F8B956911C213D /* Pods-TabBarTransitionsExample.release.xcconfig */;
+			baseConfigurationReference = 2681050A60B8D4E69BEA1085 /* Pods-TabBarTransitionsExample.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -392,7 +400,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.touchwonders.TabBarTransitionsExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

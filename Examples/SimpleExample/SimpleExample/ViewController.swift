@@ -58,9 +58,9 @@ func color(_ index: Int) -> UIColor {
 
 extension String {
     func magic(_ magicIndex: Int) -> String {
-        if magicIndex < characters.count {
+        if magicIndex < self.count {
             let i = index(startIndex, offsetBy: magicIndex)
-            return substring(to: i)
+            return String(self[PartialRangeUpTo(i)])
         } else {
             return padding(toLength: magicIndex, withPad: "!", startingAt: 0)
         }
