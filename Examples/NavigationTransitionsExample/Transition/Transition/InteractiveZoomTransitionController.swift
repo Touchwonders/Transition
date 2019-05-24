@@ -66,12 +66,23 @@ extension InteractiveZoomTransitionController : SharedElementProvider {
         
         let initialFrame: CGRect
         let targetFrame: CGRect
+
+        // Get top margin, depending on possible safe area
+        var yMargin: CGFloat
+
+        if #available(iOS 11.0, *) {
+            yMargin = toViewController.collectionView.safeAreaInsets.top
+        } else {
+            yMargin = 0.0
+        }
+        
+        yMargin += CollectionViewController.margin
         
         if isPresenting {
             initialFrame = fromViewController.targetFrame
-            targetFrame = CGRect(origin: CGPoint(x: CollectionViewController.margin, y: CollectionViewController.margin), size: header.image.frame.size)
+            targetFrame = CGRect(origin: CGPoint(x: CollectionViewController.margin, y: yMargin), size: header.image.frame.size)
         } else {
-            initialFrame = CGRect(origin: CGPoint(x: CollectionViewController.margin, y: CollectionViewController.margin), size: header.image.frame.size)
+            initialFrame = CGRect(origin: CGPoint(x: CollectionViewController.margin, y: yMargin), size: header.image.frame.size)
             targetFrame = toViewController.targetFrame
         }
         
