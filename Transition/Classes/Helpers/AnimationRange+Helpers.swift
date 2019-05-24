@@ -29,14 +29,14 @@ public enum AnimationRangePosition {
 }
 
 public extension AnimationRangePosition {
-    public var reversed: AnimationRangePosition {
+    var reversed: AnimationRangePosition {
         switch self {
         case .contains: return .contains
         case .isBefore: return .isAfter
         case .isAfter: return .isBefore
         }
     }
-    public func reversed(_ shouldReverse: Bool) -> AnimationRangePosition {
+    func reversed(_ shouldReverse: Bool) -> AnimationRangePosition {
         return shouldReverse ? reversed : self
     }
 }
@@ -44,25 +44,25 @@ public extension AnimationRangePosition {
 
 public extension AnimationRange {
     
-    public var length: AnimationFraction {
+    var length: AnimationFraction {
         return end - start
     }
     
     /// Returns true if the range contains the fraction
-    public func contains(_ fraction: AnimationFraction) -> Bool {
+    func contains(_ fraction: AnimationFraction) -> Bool {
         return position(fraction) == .contains
     }
     /// Returns true if the range is positioned before the fraction
-    public func isBefore(_ fraction: AnimationFraction) -> Bool {
+    func isBefore(_ fraction: AnimationFraction) -> Bool {
         return position(fraction) == .isBefore
     }
     /// Returns true if the range is positioned after the fraction
-    public func isAfter(_ fraction: AnimationFraction) -> Bool {
+    func isAfter(_ fraction: AnimationFraction) -> Bool {
         return position(fraction) == .isAfter
     }
     
     /// Returns the position of the range relative to the given fraction
-    public func position(_ fraction: AnimationFraction) -> AnimationRangePosition {
+    func position(_ fraction: AnimationFraction) -> AnimationRangePosition {
         
         if end < fraction {
             return .isBefore
@@ -75,7 +75,7 @@ public extension AnimationRange {
     
     /// Returns the distance (either measured from end or start, if the range is before or after respectively) relative to the fraction.
     /// Returns 0 if the range contains the fraction
-    public func distance(to fraction: AnimationFraction) -> AnimationFraction {
+    func distance(to fraction: AnimationFraction) -> AnimationFraction {
         switch position(fraction) {
         case .isBefore: return fraction - end
         case .isAfter: return start - fraction
@@ -87,7 +87,7 @@ public extension AnimationRange {
     /// If the position is before `fraction`, it'll return 1.
     /// If the position is after `fraction`, it'll return 0.
     /// Otherwise it maps fraction to the range.
-    public func relativeFractionComplete(to fraction: AnimationFraction) -> AnimationFraction {
+    func relativeFractionComplete(to fraction: AnimationFraction) -> AnimationFraction {
         switch position(fraction) {
         case .isBefore: return 1.0
         case .isAfter: return 0.0

@@ -424,17 +424,17 @@ fileprivate extension TransitionDriver {
         return uniqueParticipatingViewControllers.compactMap { $0 as? TransitionPhaseDelegate }
     }
     
-    fileprivate func willTransition(with sharedElement: SharedElement?) {
+    func willTransition(with sharedElement: SharedElement?) {
         guard let fromViewController = context.fromViewController, let toViewController = context.toViewController else { return }
         uniqueTransitionPhaseDelegates.forEach { $0.willTransition(from: fromViewController, to: toViewController, with: sharedElement) }
     }
     
-    fileprivate func didTransition(with sharedElement: SharedElement?) {
+    func didTransition(with sharedElement: SharedElement?) {
         guard let fromViewController = context.fromViewController, let toViewController = context.toViewController else { return }
         uniqueTransitionPhaseDelegates.forEach { $0.didTransition(from: fromViewController, to: toViewController, with: sharedElement) }
     }
     
-    fileprivate func cancelledTransition(with sharedElement: SharedElement?) {
+    func cancelledTransition(with sharedElement: SharedElement?) {
         guard let fromViewController = context.fromViewController, let toViewController = context.toViewController else { return }
         uniqueTransitionPhaseDelegates.forEach { $0.cancelledTransition(from: fromViewController, to: toViewController, with: sharedElement) }
     }
