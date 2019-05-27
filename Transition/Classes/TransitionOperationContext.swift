@@ -53,5 +53,5 @@ public class TransitionOperationContext {
      *  view controller of the window, a parent view controller that is marked as defining the current context, 
      *  or the last view controller that was presented. This view controller may or may not be the same as the one in the source parameter."
     */
-    internal(set) var sourceViewController: UIViewController?
+    var sourceViewController: UIViewController?
 }

@@ -52,7 +52,7 @@ public extension Transition {
     
     /// The effective duration is the duration, influenced by the presence of any timingParameter (in animation or interaction)
     /// that has an implicit duration due to a spring timing curve configuration.
-    public var effectiveDuration: TimeInterval {
+    var effectiveDuration: TimeInterval {
         /// First check if there's any animationLayer that has an implicit duration (due to spring timing parameters) that
         /// would effectively stretch up the total duration (i.e. lasting beyond transition.duration).
         let animationLayersDuration = animation.layers.reduce(duration) { (currentDuration, animationLayer) -> TimeInterval in

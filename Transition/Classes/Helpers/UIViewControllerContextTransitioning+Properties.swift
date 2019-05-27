@@ -33,7 +33,7 @@ public extension UIViewControllerContextTransitioning {
      one presenting the "to” view controller or is the one being replaced by the "to” 
      view controller.
     */
-    public var fromViewController: UIViewController! {
+    var fromViewController: UIViewController! {
         return self.viewController(forKey: .from)
     }
     
@@ -41,7 +41,7 @@ public extension UIViewControllerContextTransitioning {
      Identifies the view controller that is visible at the end of a completed transition.
      This view controller is the one being presented.
     */
-    public var toViewController: UIViewController! {
+    var toViewController: UIViewController! {
         return self.viewController(forKey: .to)
     }
     
@@ -50,7 +50,7 @@ public extension UIViewControllerContextTransitioning {
      Identifies the view that is shown at the beginning of the transition (and at the end
      of a canceled transition). This view is typically the presenting view controller’s view.
     */
-    public var fromView: UIView! {
+    var fromView: UIView! {
         return self.view(forKey: .from) ?? fromViewController.view
     }
     
@@ -58,7 +58,7 @@ public extension UIViewControllerContextTransitioning {
      Identifies the view that is shown at the end of a completed transition. This view is 
      typically the presented view controller’s view but may also be an ancestor of that view.
     */
-    public var toView: UIView! {
+    var toView: UIView! {
         return self.view(forKey: .to) ?? toViewController.view
     }
 }
@@ -70,7 +70,7 @@ public extension UIViewControllerContextTransitioning {
         This installs the to and from view when necessary, based on the operation.
         It returns the top-most view which is either the fromView or toView.
      */
-    @discardableResult public func defaultViewSetup(for operation: TransitionOperation) -> UIView? {
+    @discardableResult func defaultViewSetup(for operation: TransitionOperation) -> UIView? {
         switch operation {
         case .navigation(let navigationOperation):  return defaultViewSetup(for: navigationOperation)
         case .modal(let modalOperation):            return defaultViewSetup(for: modalOperation)
@@ -79,7 +79,7 @@ public extension UIViewControllerContextTransitioning {
         }
     }
     
-    public func defaultViewSetup(for navigationOperation: UINavigationController.Operation) -> UIView? {
+    func defaultViewSetup(for navigationOperation: UINavigationController.Operation) -> UIView? {
         switch navigationOperation {
         case .push:
             containerView.addSubview(toView)
@@ -93,7 +93,7 @@ public extension UIViewControllerContextTransitioning {
         return navigationOperation == .push ? toView : fromView
     }
     
-    public func defaultViewSetup(for modalOperation: UIViewControllerModalOperation) -> UIView? {
+    func defaultViewSetup(for modalOperation: UIViewControllerModalOperation) -> UIView? {
         switch modalOperation {
         case .present:
             containerView.addSubview(toView)
@@ -107,7 +107,7 @@ public extension UIViewControllerContextTransitioning {
         return modalOperation == .present ? toView : fromView
     }
     
-    public func defaultViewSetup(for tabBarOperation: UITabBarControllerOperation) -> UIView? {
+    func defaultViewSetup(for tabBarOperation: UITabBarControllerOperation) -> UIView? {
         guard tabBarOperation != .none else { return nil }
         containerView.addSubview(toView)
         toView.frame = finalFrame(for: toViewController)
