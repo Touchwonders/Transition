@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Transition'
-  s.version          = '1.2.1'
+  s.version          = '1.3.0'
   s.summary          = 'Easy interactive interruptible custom ViewController transitions.'
 
   s.description      = <<-DESC
@@ -15,7 +15,7 @@ Transition makes building interactive interruptible custom view controller trans
 
   s.ios.deployment_target = '10.0'
   s.platform     = :ios, '10.0'
-  s.swift_version = '4.2'
+  s.swift_version = '5'
 
   s.source_files = 'Transition/Classes/**/*'
 end
