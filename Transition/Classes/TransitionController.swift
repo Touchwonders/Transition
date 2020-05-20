@@ -390,8 +390,8 @@ extension TransitionController : UITabBarControllerDelegate {
     
     public func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         guard let viewControllers = tabBarController.viewControllers,
-            let fromIndex = viewControllers.index(of: fromVC),
-            let toIndex = viewControllers.index(of: toVC) else { return nil }
+            let fromIndex = viewControllers.firstIndex(of: fromVC),
+            let toIndex = viewControllers.firstIndex(of: toVC) else { return nil }
         
         self.sourceViewController = fromVC
         self.operation = .tabBar(fromIndex < toIndex ? .increaseIndex : .decreaseIndex)
