@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		85277C71050F4FC75BBA430F /* Pods_BuiltInTransitionsCatalog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B4DEF040CAAD71238C4EB5 /* Pods_BuiltInTransitionsCatalog.framework */; };
+		7D947F11C53AD01295A9A725 /* Pods_BuiltInTransitionsCatalog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D42E41089137333F688668 /* Pods_BuiltInTransitionsCatalog.framework */; };
 		BA7592DE1E5CC79B00B021BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7592DD1E5CC79B00B021BF /* AppDelegate.swift */; };
 		BA7592E01E5CC79B00B021BF /* AwesomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7592DF1E5CC79B00B021BF /* AwesomeViewController.swift */; };
 		BA7592E31E5CC79B00B021BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA7592E11E5CC79B00B021BF /* Main.storyboard */; };
@@ -19,8 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		08B4DEF040CAAD71238C4EB5 /* Pods_BuiltInTransitionsCatalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuiltInTransitionsCatalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DEF4EAD7EED2B7BDBA682E7 /* Pods-BuiltInTransitionsCatalog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuiltInTransitionsCatalog.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuiltInTransitionsCatalog/Pods-BuiltInTransitionsCatalog.release.xcconfig"; sourceTree = "<group>"; };
+		42630ACD291E937B4B367E36 /* Pods-BuiltInTransitionsCatalog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuiltInTransitionsCatalog.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuiltInTransitionsCatalog/Pods-BuiltInTransitionsCatalog.release.xcconfig"; sourceTree = "<group>"; };
+		A7D42E41089137333F688668 /* Pods_BuiltInTransitionsCatalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuiltInTransitionsCatalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7592DA1E5CC79B00B021BF /* BuiltInTransitionsCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuiltInTransitionsCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7592DD1E5CC79B00B021BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA7592DF1E5CC79B00B021BF /* AwesomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeViewController.swift; sourceTree = "<group>"; };
@@ -31,7 +31,7 @@
 		BA7592EF1E5CC89F00B021BF /* CatalogMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogMenu.swift; sourceTree = "<group>"; };
 		BA7592F11E5CD10C00B021BF /* Catalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
 		BAE576761E5ED48400E8ABC3 /* TransitionStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionStyle.swift; sourceTree = "<group>"; };
-		D5C11E822D9E1D25F5AFFE7C /* Pods-BuiltInTransitionsCatalog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuiltInTransitionsCatalog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuiltInTransitionsCatalog/Pods-BuiltInTransitionsCatalog.debug.xcconfig"; sourceTree = "<group>"; };
+		C4197FEA39A058BB7450EC19 /* Pods-BuiltInTransitionsCatalog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuiltInTransitionsCatalog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuiltInTransitionsCatalog/Pods-BuiltInTransitionsCatalog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,20 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85277C71050F4FC75BBA430F /* Pods_BuiltInTransitionsCatalog.framework in Frameworks */,
+				7D947F11C53AD01295A9A725 /* Pods_BuiltInTransitionsCatalog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18E86D9309BD4FAD631D0F18 /* Pods */ = {
+		0A992125230932818237138E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D5C11E822D9E1D25F5AFFE7C /* Pods-BuiltInTransitionsCatalog.debug.xcconfig */,
-				4DEF4EAD7EED2B7BDBA682E7 /* Pods-BuiltInTransitionsCatalog.release.xcconfig */,
+				C4197FEA39A058BB7450EC19 /* Pods-BuiltInTransitionsCatalog.debug.xcconfig */,
+				42630ACD291E937B4B367E36 /* Pods-BuiltInTransitionsCatalog.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		86838CA4C07D09EC20478934 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7D42E41089137333F688668 /* Pods_BuiltInTransitionsCatalog.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		BA7592D11E5CC79B00B021BF = {
@@ -60,8 +68,8 @@
 			children = (
 				BA7592DC1E5CC79B00B021BF /* BuiltInTransitionsCatalog */,
 				BA7592DB1E5CC79B00B021BF /* Products */,
-				18E86D9309BD4FAD631D0F18 /* Pods */,
-				E43A34B2DF12344A2117A3D0 /* Frameworks */,
+				0A992125230932818237138E /* Pods */,
+				86838CA4C07D09EC20478934 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,14 +105,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		E43A34B2DF12344A2117A3D0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				08B4DEF040CAAD71238C4EB5 /* Pods_BuiltInTransitionsCatalog.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,11 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA7592EC1E5CC79B00B021BF /* Build configuration list for PBXNativeTarget "BuiltInTransitionsCatalog" */;
 			buildPhases = (
-				F5EC54BB13AFE33EC4E55605 /* [CP] Check Pods Manifest.lock */,
+				463997EEC7F7D248D9BE506E /* [CP] Check Pods Manifest.lock */,
 				BA7592D61E5CC79B00B021BF /* Sources */,
 				BA7592D71E5CC79B00B021BF /* Frameworks */,
 				BA7592D81E5CC79B00B021BF /* Resources */,
-				7C7AB9BE18FC8A69D847A051 /* [CP] Embed Pods Frameworks */,
+				998D0EE913C5A517377F9B55 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,7 +141,7 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = LQ449R4NTB;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -177,29 +177,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7C7AB9BE18FC8A69D847A051 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BuiltInTransitionsCatalog/Pods-BuiltInTransitionsCatalog-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Transition/Transition.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Transition.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuiltInTransitionsCatalog/Pods-BuiltInTransitionsCatalog-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F5EC54BB13AFE33EC4E55605 /* [CP] Check Pods Manifest.lock */ = {
+		463997EEC7F7D248D9BE506E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -219,6 +197,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		998D0EE913C5A517377F9B55 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BuiltInTransitionsCatalog/Pods-BuiltInTransitionsCatalog-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Transition/Transition.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Transition.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuiltInTransitionsCatalog/Pods-BuiltInTransitionsCatalog-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -365,13 +365,16 @@
 		};
 		BA7592ED1E5CC79B00B021BF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5C11E822D9E1D25F5AFFE7C /* Pods-BuiltInTransitionsCatalog.debug.xcconfig */;
+			baseConfigurationReference = C4197FEA39A058BB7450EC19 /* Pods-BuiltInTransitionsCatalog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = LQ449R4NTB;
 				INFOPLIST_FILE = BuiltInTransitionsCatalog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.touchwonders.BuiltInTransitionsCatalog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Touchwonders Wildcard Development";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
 			};
@@ -379,13 +382,16 @@
 		};
 		BA7592EE1E5CC79B00B021BF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DEF4EAD7EED2B7BDBA682E7 /* Pods-BuiltInTransitionsCatalog.release.xcconfig */;
+			baseConfigurationReference = 42630ACD291E937B4B367E36 /* Pods-BuiltInTransitionsCatalog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BuiltInTransitionsCatalog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.touchwonders.BuiltInTransitionsCatalog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
 			};
