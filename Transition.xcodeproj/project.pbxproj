@@ -40,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4BB0346E254DA2D70017A34C /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		BA3FFA1C1E827BA7004004A3 /* Transition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Transition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3FFA1F1E827BA7004004A3 /* Transition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transition.h; sourceTree = "<group>"; };
 		BA3FFA201E827BA7004004A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,6 +89,7 @@
 		BA3FFA121E827BA7004004A3 = {
 			isa = PBXGroup;
 			children = (
+				4BB0346E254DA2D70017A34C /* Package.swift */,
 				BA3FFA1E1E827BA7004004A3 /* Transition */,
 				BA3FFA1D1E827BA7004004A3 /* Products */,
 			);
@@ -224,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = BA3FFA121E827BA7004004A3;
